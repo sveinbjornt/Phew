@@ -177,7 +177,6 @@ static BOOL CGImageWritePixelDataToFile(CGImageRef image, NSString *path) {
 }
     
 - (void)windowWillClose:(NSNotification *)notification {
-    [[viewController imageView] setImage:NULL imageProperties:@{}];
     //[[viewController imageView] setImageWithURL:nil];
 }
 

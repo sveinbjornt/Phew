@@ -41,21 +41,36 @@
 
 @implementation ImageViewController
 
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-}
-
 - (IKImageView *)imageView {
     return imageView;
+}
+
+#pragma mark -
+    
+- (void)viewDidDisappear {
+    [imageView setImage:NULL imageProperties:nil];
+    [imageView setImageWithURL:nil];
+    imageView = nil;
 }
 
 - (void)viewWillAppear {
     [super viewWillAppear];
     
+    if (!imageView) {
+        imageView = [[IKImageView alloc] initWithFrame:self.view.frame];
+        [imageView setHasVerticalScroller:YES];
+        [imageView setHasHorizontalScroller:YES];
+        [imageView setAutohidesScrollers:YES];
+        [imageView setAutoresizes:YES];
+        [imageView setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
+        [imageView setDelegate:self];
+        [self.view addSubview:imageView];
+    }
+    
     windowController = self.view.window.windowController;
     ImageDocument *imgDoc = windowController.document;
     
-    if (windowController && imgDoc) {
+    if (imgDoc) {
         [imageView setImage:imgDoc.cgImageRef imageProperties:@{}];
         windowController.naturalSize = [imgDoc dimensions];
         [windowController setToIdealSize];
@@ -69,6 +84,14 @@
         [imageView zoomImageToFit:self];
     }
 }
+    
+#pragma mark - IKImageViewDelegate
+    
+-(void) imageWillChange: (IKImageView *) imageView {
+    
+}
+    
+#pragma mark -
 
 - (IBAction)viewSizeMenuSelected:(id)sender {
      [self viewSizeChangeSelected:[sender title]];
