@@ -1,6 +1,6 @@
 # Phew - FLIF Image Viewer for macOS
 
-<img align="right" src="doc/phew_icon.png" style="float: right; margin-left: 30px; width:128px; height:128px;" alt="Phew Application Icon">
+<img align="right" src="doc/phew_icon.png" width="128" height="128" style="float: right; margin-left: 30px; width:128px; height:128px;" alt="Phew Application Icon">
 
 **Phew** is an open-source <a href="http://flif.info">FLIF</a> image viewer and QuickLook plugin for macOS.
 
