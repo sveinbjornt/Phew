@@ -1,0 +1,803 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F407094F1E9C0F050025B591 /* GenerateThumbnailForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F407094E1E9C0F050025B591 /* GenerateThumbnailForURL.m */; };
+		F40709511E9C0F050025B591 /* GeneratePreviewForURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F40709501E9C0F050025B591 /* GeneratePreviewForURL.m */; };
+		F40709531E9C0F050025B591 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F40709521E9C0F050025B591 /* main.c */; };
+		F445ABAE1E9D175A000158FD /* FLIFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F445ABAC1E9D175A000158FD /* FLIFImage.h */; };
+		F445ABAF1E9D175A000158FD /* FLIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F445ABAD1E9D175A000158FD /* FLIFImage.m */; };
+		F451B4BF1E9F8CD300DE50FD /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = F451B4BE1E9F8CD300DE50FD /* Credits.html */; };
+		F451B4C91E9F94BC00DE50FD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4C81E9F94BC00DE50FD /* Sparkle.framework */; };
+		F451B4CA1E9F94E900DE50FD /* Sparkle.framework in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4C81E9F94BC00DE50FD /* Sparkle.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F47197BB1E9E4C1F0022DFF2 /* PhewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */; };
+		F47197BE1E9E4C1F0022DFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BD1E9E4C1F0022DFF2 /* main.m */; };
+		F47197C11E9E4C1F0022DFF2 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197C01E9E4C1F0022DFF2 /* ImageViewController.m */; };
+		F47197C41E9E4C1F0022DFF2 /* ImageDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197C31E9E4C1F0022DFF2 /* ImageDocument.m */; };
+		F47197C61E9E4C1F0022DFF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47197C51E9E4C1F0022DFF2 /* Assets.xcassets */; };
+		F47197C91E9E4C1F0022DFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47197C71E9E4C1F0022DFF2 /* Main.storyboard */; };
+		F47197CE1E9E4D5A0022DFF2 /* FLIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F445ABAD1E9D175A000158FD /* FLIFImage.m */; };
+		F47197D51E9E536D0022DFF2 /* PhewWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197D41E9E536D0022DFF2 /* PhewWindowController.m */; };
+		F47197D91E9E61330022DFF2 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197D71E9E61330022DFF2 /* Quartz.framework */; };
+		F47197DA1E9E61330022DFF2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197D81E9E61330022DFF2 /* QuartzCore.framework */; };
+		F47197DC1E9E6EDE0022DFF2 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197DB1E9E6EDE0022DFF2 /* CoreServices.framework */; };
+		F47197E31E9E88D80022DFF2 /* QuickLookInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197E21E9E88D80022DFF2 /* QuickLookInstaller.m */; };
+		F47197E61E9E93840022DFF2 /* STPrivilegedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197E51E9E93840022DFF2 /* STPrivilegedTask.m */; };
+		F47197EC1E9E9F110022DFF2 /* FLIFImages.qlgenerator in Resources */ = {isa = PBXBuildFile; fileRef = F407094C1E9C0F050025B591 /* FLIFImages.qlgenerator */; };
+		F47197F31E9EFC9C0022DFF2 /* libflif.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; };
+		F47197F41E9EFC9C0022DFF2 /* libflif.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; };
+		F47197F51E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; };
+		F47197F61E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; };
+		F47197F71E9EFCB50022DFF2 /* libflif.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F47197F91E9EFCBE0022DFF2 /* libflif.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F47197FA1E9EFCC00022DFF2 /* libpng.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F47198061E9F01E10022DFF2 /* flif-interface-private.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F47197FE1E9F01E10022DFF2 /* flif-interface-private.hpp */; };
+		F47198071E9F01E10022DFF2 /* flif-interface-private_common.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F47197FF1E9F01E10022DFF2 /* flif-interface-private_common.hpp */; };
+		F47198081E9F01E10022DFF2 /* flif-interface-private_dec.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F47198001E9F01E10022DFF2 /* flif-interface-private_dec.hpp */; };
+		F47198091E9F01E10022DFF2 /* flif-interface-private_enc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F47198011E9F01E10022DFF2 /* flif-interface-private_enc.hpp */; };
+		F471980A1E9F01E10022DFF2 /* flif.h in Headers */ = {isa = PBXBuildFile; fileRef = F47198021E9F01E10022DFF2 /* flif.h */; };
+		F471980B1E9F01E10022DFF2 /* flif_common.h in Headers */ = {isa = PBXBuildFile; fileRef = F47198031E9F01E10022DFF2 /* flif_common.h */; };
+		F471980C1E9F01E10022DFF2 /* flif_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F47198041E9F01E10022DFF2 /* flif_dec.h */; };
+		F471980D1E9F01E10022DFF2 /* flif_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F47198051E9F01E10022DFF2 /* flif_enc.h */; };
+		F47198121E9F06470022DFF2 /* libpng.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F47198281E9F0B190022DFF2 /* ReadMe.html in Resources */ = {isa = PBXBuildFile; fileRef = F47198271E9F0B190022DFF2 /* ReadMe.html */; };
+		F471982A1E9F0B200022DFF2 /* License.html in Resources */ = {isa = PBXBuildFile; fileRef = F47198291E9F0B200022DFF2 /* License.html */; };
+		F47198311E9F0C100022DFF2 /* NSWorkspace+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F47198301E9F0C100022DFF2 /* NSWorkspace+Additions.m */; };
+		F48259751E9C32400026A442 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F40709441E9BF77D0025B591 /* AppKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F47197EA1E9E9EAC0022DFF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4898B2A1E9BD3C700C5F29D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F407094B1E9C0F050025B591;
+			remoteInfo = FLIFImages;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F407095A1E9C16130025B591 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F47197F91E9EFCBE0022DFF2 /* libflif.dylib in CopyFiles */,
+				F47197FA1E9EFCC00022DFF2 /* libpng.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47197D01E9E4D710022DFF2 /* Copy to Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F47197F71E9EFCB50022DFF2 /* libflif.dylib in Copy to Frameworks */,
+				F47198121E9F06470022DFF2 /* libpng.dylib in Copy to Frameworks */,
+				F451B4CA1E9F94E900DE50FD /* Sparkle.framework in Copy to Frameworks */,
+			);
+			name = "Copy to Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F40709441E9BF77D0025B591 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		F407094C1E9C0F050025B591 /* FLIFImages.qlgenerator */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLIFImages.qlgenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		F407094E1E9C0F050025B591 /* GenerateThumbnailForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenerateThumbnailForURL.m; sourceTree = "<group>"; };
+		F40709501E9C0F050025B591 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
+		F40709521E9C0F050025B591 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F40709541E9C0F050025B591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F445ABAC1E9D175A000158FD /* FLIFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLIFImage.h; sourceTree = "<group>"; };
+		F445ABAD1E9D175A000158FD /* FLIFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLIFImage.m; sourceTree = "<group>"; };
+		F451B4BE1E9F8CD300DE50FD /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
+		F451B4C01E9F8F8D00DE50FD /* Markdown.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; name = Markdown.pl; path = doc/Markdown.pl; sourceTree = "<group>"; };
+		F451B4C11E9F8F8D00DE50FD /* phew_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = phew_icon.png; path = doc/phew_icon.png; sourceTree = "<group>"; };
+		F451B4C21E9F8F8D00DE50FD /* phew_screenshot1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = phew_screenshot1.jpg; path = doc/phew_screenshot1.jpg; sourceTree = "<group>"; };
+		F451B4C31E9F8F8D00DE50FD /* phew_screenshot2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = phew_screenshot2.jpg; path = doc/phew_screenshot2.jpg; sourceTree = "<group>"; };
+		F451B4C41E9F8F8D00DE50FD /* phew_screenshot3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = phew_screenshot3.jpg; path = doc/phew_screenshot3.jpg; sourceTree = "<group>"; };
+		F451B4C51E9F8F8D00DE50FD /* phew_screenshot4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = phew_screenshot4.jpg; path = doc/phew_screenshot4.jpg; sourceTree = "<group>"; };
+		F451B4C61E9F8F8D00DE50FD /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO.txt; path = doc/TODO.txt; sourceTree = "<group>"; };
+		F451B4C81E9F94BC00DE50FD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Sparkle/Sparkle.framework; sourceTree = "<group>"; };
+		F451B4CC1E9F995D00DE50FD /* dsa_priv.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_priv.pem; sourceTree = "<group>"; };
+		F451B4CD1E9F995D00DE50FD /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		F451B4CE1E9F995D00DE50FD /* generate_keys.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = generate_keys.rb; sourceTree = "<group>"; };
+		F451B4CF1E9F995D00DE50FD /* PhewAppcast.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PhewAppcast.xml; sourceTree = "<group>"; };
+		F451B4D01E9F995D00DE50FD /* sign_update.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = sign_update.rb; sourceTree = "<group>"; };
+		F451B4D21E9F995D00DE50FD /* update_appcast.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = update_appcast.sh; sourceTree = "<group>"; };
+		F47197B71E9E4C1F0022DFF2 /* Phew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phew.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F47197B91E9E4C1F0022DFF2 /* PhewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhewAppDelegate.h; sourceTree = "<group>"; };
+		F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhewAppDelegate.m; sourceTree = "<group>"; };
+		F47197BD1E9E4C1F0022DFF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F47197BF1E9E4C1F0022DFF2 /* ImageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		F47197C01E9E4C1F0022DFF2 /* ImageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		F47197C21E9E4C1F0022DFF2 /* ImageDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDocument.h; sourceTree = "<group>"; };
+		F47197C31E9E4C1F0022DFF2 /* ImageDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDocument.m; sourceTree = "<group>"; };
+		F47197C51E9E4C1F0022DFF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F47197C81E9E4C1F0022DFF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F47197CA1E9E4C1F0022DFF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F47197D31E9E536D0022DFF2 /* PhewWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhewWindowController.h; sourceTree = "<group>"; };
+		F47197D41E9E536D0022DFF2 /* PhewWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhewWindowController.m; sourceTree = "<group>"; };
+		F47197D71E9E61330022DFF2 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		F47197D81E9E61330022DFF2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F47197DB1E9E6EDE0022DFF2 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		F47197E11E9E88D80022DFF2 /* QuickLookInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickLookInstaller.h; sourceTree = "<group>"; };
+		F47197E21E9E88D80022DFF2 /* QuickLookInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickLookInstaller.m; sourceTree = "<group>"; };
+		F47197E41E9E93840022DFF2 /* STPrivilegedTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPrivilegedTask.h; sourceTree = "<group>"; };
+		F47197E51E9E93840022DFF2 /* STPrivilegedTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STPrivilegedTask.m; sourceTree = "<group>"; };
+		F47197F11E9EFC9C0022DFF2 /* libflif.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libflif.dylib; path = libs/libflif.dylib; sourceTree = SOURCE_ROOT; };
+		F47197F21E9EFC9C0022DFF2 /* libpng.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng.dylib; path = libs/libpng.dylib; sourceTree = SOURCE_ROOT; };
+		F47197FE1E9F01E10022DFF2 /* flif-interface-private.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "flif-interface-private.hpp"; sourceTree = "<group>"; };
+		F47197FF1E9F01E10022DFF2 /* flif-interface-private_common.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "flif-interface-private_common.hpp"; sourceTree = "<group>"; };
+		F47198001E9F01E10022DFF2 /* flif-interface-private_dec.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "flif-interface-private_dec.hpp"; sourceTree = "<group>"; };
+		F47198011E9F01E10022DFF2 /* flif-interface-private_enc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = "flif-interface-private_enc.hpp"; sourceTree = "<group>"; };
+		F47198021E9F01E10022DFF2 /* flif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif.h; sourceTree = "<group>"; };
+		F47198031E9F01E10022DFF2 /* flif_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif_common.h; sourceTree = "<group>"; };
+		F47198041E9F01E10022DFF2 /* flif_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif_dec.h; sourceTree = "<group>"; };
+		F47198051E9F01E10022DFF2 /* flif_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif_enc.h; sourceTree = "<group>"; };
+		F47198251E9F0B020022DFF2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F47198271E9F0B190022DFF2 /* ReadMe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ReadMe.html; sourceTree = "<group>"; };
+		F47198291E9F0B200022DFF2 /* License.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = License.html; sourceTree = "<group>"; };
+		F471982F1E9F0C100022DFF2 /* NSWorkspace+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSWorkspace+Additions.h"; sourceTree = "<group>"; };
+		F47198301E9F0C100022DFF2 /* NSWorkspace+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSWorkspace+Additions.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F40709481E9C0F050025B591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F48259751E9C32400026A442 /* AppKit.framework in Frameworks */,
+				F47197F31E9EFC9C0022DFF2 /* libflif.dylib in Frameworks */,
+				F47197F51E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47197B41E9E4C1F0022DFF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47197DC1E9E6EDE0022DFF2 /* CoreServices.framework in Frameworks */,
+				F451B4C91E9F94BC00DE50FD /* Sparkle.framework in Frameworks */,
+				F47197D91E9E61330022DFF2 /* Quartz.framework in Frameworks */,
+				F47197DA1E9E61330022DFF2 /* QuartzCore.framework in Frameworks */,
+				F47197F61E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */,
+				F47197F41E9EFC9C0022DFF2 /* libflif.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F40709431E9BF77D0025B591 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F47197FB1E9F01B60022DFF2 /* libs */,
+				F451B4C81E9F94BC00DE50FD /* Sparkle.framework */,
+				F47197DB1E9E6EDE0022DFF2 /* CoreServices.framework */,
+				F47197D71E9E61330022DFF2 /* Quartz.framework */,
+				F47197D81E9E61330022DFF2 /* QuartzCore.framework */,
+				F40709441E9BF77D0025B591 /* AppKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F407094D1E9C0F050025B591 /* FLIFImageQuickLookPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				F40709521E9C0F050025B591 /* main.c */,
+				F407094E1E9C0F050025B591 /* GenerateThumbnailForURL.m */,
+				F40709501E9C0F050025B591 /* GeneratePreviewForURL.m */,
+				F40709541E9C0F050025B591 /* Info.plist */,
+			);
+			path = FLIFImageQuickLookPlugin;
+			sourceTree = "<group>";
+		};
+		F445ABAB1E9D175A000158FD /* FLIFImage Class */ = {
+			isa = PBXGroup;
+			children = (
+				F445ABAC1E9D175A000158FD /* FLIFImage.h */,
+				F445ABAD1E9D175A000158FD /* FLIFImage.m */,
+			);
+			name = "FLIFImage Class";
+			path = FLIFImage;
+			sourceTree = "<group>";
+		};
+		F451B4C71E9F8FC500DE50FD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F451B4C11E9F8F8D00DE50FD /* phew_icon.png */,
+				F451B4C21E9F8F8D00DE50FD /* phew_screenshot1.jpg */,
+				F451B4C31E9F8F8D00DE50FD /* phew_screenshot2.jpg */,
+				F451B4C41E9F8F8D00DE50FD /* phew_screenshot3.jpg */,
+				F451B4C51E9F8F8D00DE50FD /* phew_screenshot4.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		F451B4CB1E9F995D00DE50FD /* Sparkle */ = {
+			isa = PBXGroup;
+			children = (
+				F451B4CC1E9F995D00DE50FD /* dsa_priv.pem */,
+				F451B4CD1E9F995D00DE50FD /* dsa_pub.pem */,
+				F451B4CE1E9F995D00DE50FD /* generate_keys.rb */,
+				F451B4CF1E9F995D00DE50FD /* PhewAppcast.xml */,
+				F451B4D01E9F995D00DE50FD /* sign_update.rb */,
+				F451B4D21E9F995D00DE50FD /* update_appcast.sh */,
+			);
+			path = Sparkle;
+			sourceTree = "<group>";
+		};
+		F47197B81E9E4C1F0022DFF2 /* Phew Application */ = {
+			isa = PBXGroup;
+			children = (
+				F47197BD1E9E4C1F0022DFF2 /* main.m */,
+				F47197B91E9E4C1F0022DFF2 /* PhewAppDelegate.h */,
+				F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */,
+				F47197D31E9E536D0022DFF2 /* PhewWindowController.h */,
+				F47197D41E9E536D0022DFF2 /* PhewWindowController.m */,
+				F47197BF1E9E4C1F0022DFF2 /* ImageViewController.h */,
+				F47197C01E9E4C1F0022DFF2 /* ImageViewController.m */,
+				F47197C21E9E4C1F0022DFF2 /* ImageDocument.h */,
+				F47197C31E9E4C1F0022DFF2 /* ImageDocument.m */,
+				F47197E91E9E98E10022DFF2 /* Utils */,
+				F47197D61E9E53BC0022DFF2 /* Resources */,
+			);
+			name = "Phew Application";
+			path = Phew;
+			sourceTree = "<group>";
+		};
+		F47197D61E9E53BC0022DFF2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F451B4BE1E9F8CD300DE50FD /* Credits.html */,
+				F47197C51E9E4C1F0022DFF2 /* Assets.xcassets */,
+				F47197C71E9E4C1F0022DFF2 /* Main.storyboard */,
+				F47197CA1E9E4C1F0022DFF2 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		F47197E91E9E98E10022DFF2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F47197E11E9E88D80022DFF2 /* QuickLookInstaller.h */,
+				F47197E21E9E88D80022DFF2 /* QuickLookInstaller.m */,
+				F471982F1E9F0C100022DFF2 /* NSWorkspace+Additions.h */,
+				F47198301E9F0C100022DFF2 /* NSWorkspace+Additions.m */,
+				F47197E41E9E93840022DFF2 /* STPrivilegedTask.h */,
+				F47197E51E9E93840022DFF2 /* STPrivilegedTask.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		F47197FB1E9F01B60022DFF2 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F47197FC1E9F01E10022DFF2 /* headers */,
+				F47197F11E9EFC9C0022DFF2 /* libflif.dylib */,
+				F47197F21E9EFC9C0022DFF2 /* libpng.dylib */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		F47197FC1E9F01E10022DFF2 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				F47197FD1E9F01E10022DFF2 /* FLIF */,
+			);
+			name = headers;
+			path = libs/headers;
+			sourceTree = "<group>";
+		};
+		F47197FD1E9F01E10022DFF2 /* FLIF */ = {
+			isa = PBXGroup;
+			children = (
+				F47197FE1E9F01E10022DFF2 /* flif-interface-private.hpp */,
+				F47197FF1E9F01E10022DFF2 /* flif-interface-private_common.hpp */,
+				F47198001E9F01E10022DFF2 /* flif-interface-private_dec.hpp */,
+				F47198011E9F01E10022DFF2 /* flif-interface-private_enc.hpp */,
+				F47198021E9F01E10022DFF2 /* flif.h */,
+				F47198031E9F01E10022DFF2 /* flif_common.h */,
+				F47198041E9F01E10022DFF2 /* flif_dec.h */,
+				F47198051E9F01E10022DFF2 /* flif_enc.h */,
+			);
+			path = FLIF;
+			sourceTree = "<group>";
+		};
+		F471982E1E9F0B380022DFF2 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				F47198251E9F0B020022DFF2 /* README.md */,
+				F47198271E9F0B190022DFF2 /* ReadMe.html */,
+				F451B4C61E9F8F8D00DE50FD /* TODO.txt */,
+				F47198291E9F0B200022DFF2 /* License.html */,
+				F451B4C01E9F8F8D00DE50FD /* Markdown.pl */,
+				F451B4C71E9F8FC500DE50FD /* images */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		F4898B291E9BD3C700C5F29D = {
+			isa = PBXGroup;
+			children = (
+				F471982E1E9F0B380022DFF2 /* Documentation */,
+				F445ABAB1E9D175A000158FD /* FLIFImage Class */,
+				F407094D1E9C0F050025B591 /* FLIFImageQuickLookPlugin */,
+				F47197B81E9E4C1F0022DFF2 /* Phew Application */,
+				F451B4CB1E9F995D00DE50FD /* Sparkle */,
+				F40709431E9BF77D0025B591 /* Frameworks */,
+				F4898B331E9BD3C700C5F29D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4898B331E9BD3C700C5F29D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F407094C1E9C0F050025B591 /* FLIFImages.qlgenerator */,
+				F47197B71E9E4C1F0022DFF2 /* Phew.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F40709491E9C0F050025B591 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47198071E9F01E10022DFF2 /* flif-interface-private_common.hpp in Headers */,
+				F471980D1E9F01E10022DFF2 /* flif_enc.h in Headers */,
+				F471980B1E9F01E10022DFF2 /* flif_common.h in Headers */,
+				F445ABAE1E9D175A000158FD /* FLIFImage.h in Headers */,
+				F47198081E9F01E10022DFF2 /* flif-interface-private_dec.hpp in Headers */,
+				F471980C1E9F01E10022DFF2 /* flif_dec.h in Headers */,
+				F47198061E9F01E10022DFF2 /* flif-interface-private.hpp in Headers */,
+				F47198091E9F01E10022DFF2 /* flif-interface-private_enc.hpp in Headers */,
+				F471980A1E9F01E10022DFF2 /* flif.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F407094B1E9C0F050025B591 /* FLIFImages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F40709551E9C0F050025B591 /* Build configuration list for PBXNativeTarget "FLIFImages" */;
+			buildPhases = (
+				F40709471E9C0F050025B591 /* Sources */,
+				F40709481E9C0F050025B591 /* Frameworks */,
+				F40709491E9C0F050025B591 /* Headers */,
+				F407094A1E9C0F050025B591 /* Resources */,
+				F407095A1E9C16130025B591 /* CopyFiles */,
+				F407095C1E9C162A0025B591 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FLIFImages;
+			productName = FLIFImageQuickLookPlugin;
+			productReference = F407094C1E9C0F050025B591 /* FLIFImages.qlgenerator */;
+			productType = "com.apple.product-type.bundle";
+		};
+		F47197B61E9E4C1F0022DFF2 /* Phew */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F47197CB1E9E4C1F0022DFF2 /* Build configuration list for PBXNativeTarget "Phew" */;
+			buildPhases = (
+				F471980F1E9F05070022DFF2 /* Generate HTML Readme File */,
+				F47197B31E9E4C1F0022DFF2 /* Sources */,
+				F47197B41E9E4C1F0022DFF2 /* Frameworks */,
+				F47197B51E9E4C1F0022DFF2 /* Resources */,
+				F47197D01E9E4D710022DFF2 /* Copy to Frameworks */,
+				F47197D21E9E4D880022DFF2 /* Run Script to fix linking in libflif */,
+				F47197F01E9EE7FA0022DFF2 /* Run Script to increment CFBundleVersion */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F47197EB1E9E9EAC0022DFF2 /* PBXTargetDependency */,
+			);
+			name = Phew;
+			productName = Phew;
+			productReference = F47197B71E9E4C1F0022DFF2 /* Phew.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4898B2A1E9BD3C700C5F29D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Sveinbjorn Thordarson";
+				TargetAttributes = {
+					F407094B1E9C0F050025B591 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 5WX26Y89JP;
+						ProvisioningStyle = Automatic;
+					};
+					F47197B61E9E4C1F0022DFF2 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = F4898B2D1E9BD3C700C5F29D /* Build configuration list for PBXProject "Phew" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4898B291E9BD3C700C5F29D;
+			productRefGroup = F4898B331E9BD3C700C5F29D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F407094B1E9C0F050025B591 /* FLIFImages */,
+				F47197B61E9E4C1F0022DFF2 /* Phew */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F407094A1E9C0F050025B591 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47197B51E9E4C1F0022DFF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47198281E9F0B190022DFF2 /* ReadMe.html in Resources */,
+				F451B4BF1E9F8CD300DE50FD /* Credits.html in Resources */,
+				F47197C61E9E4C1F0022DFF2 /* Assets.xcassets in Resources */,
+				F471982A1E9F0B200022DFF2 /* License.html in Resources */,
+				F47197C91E9E4C1F0022DFF2 /* Main.storyboard in Resources */,
+				F47197EC1E9E9F110022DFF2 /* FLIFImages.qlgenerator in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F407095C1E9C162A0025B591 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n\nrm -Rf \"/Library/QuickLook/${FULL_PRODUCT_NAME}\"\ncp -R \"$BUILT_PRODUCTS_DIR/${FULL_PRODUCT_NAME}\" /Library/QuickLook/\nqlmanage -r";
+		};
+		F47197D21E9E4D880022DFF2 /* Run Script to fix linking in libflif */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script to fix linking in libflif";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}";
+			showEnvVarsInLog = 0;
+		};
+		F47197F01E9EE7FA0022DFF2 /* Run Script to increment CFBundleVersion */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script to increment CFBundleVersion";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nBUILD_NUMBER=`git rev-list HEAD | wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nif [ \"$?\" -ne 0 ] ; then\necho \"warning:Error incrementing CFBundleVersion\"\nfi";
+		};
+		F471980F1E9F05070022DFF2 /* Generate HTML Readme File */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate HTML Readme File";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"<html><head><title>Phew Readme</title></head><body>\"\nperl doc/Markdown.pl README.md > ReadMe.html\necho \"</body></html>\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F40709471E9C0F050025B591 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F407094F1E9C0F050025B591 /* GenerateThumbnailForURL.m in Sources */,
+				F40709511E9C0F050025B591 /* GeneratePreviewForURL.m in Sources */,
+				F445ABAF1E9D175A000158FD /* FLIFImage.m in Sources */,
+				F40709531E9C0F050025B591 /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F47197B31E9E4C1F0022DFF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F47197C41E9E4C1F0022DFF2 /* ImageDocument.m in Sources */,
+				F47197D51E9E536D0022DFF2 /* PhewWindowController.m in Sources */,
+				F47197E61E9E93840022DFF2 /* STPrivilegedTask.m in Sources */,
+				F47197CE1E9E4D5A0022DFF2 /* FLIFImage.m in Sources */,
+				F47198311E9F0C100022DFF2 /* NSWorkspace+Additions.m in Sources */,
+				F47197E31E9E88D80022DFF2 /* QuickLookInstaller.m in Sources */,
+				F47197C11E9E4C1F0022DFF2 /* ImageViewController.m in Sources */,
+				F47197BE1E9E4C1F0022DFF2 /* main.m in Sources */,
+				F47197BB1E9E4C1F0022DFF2 /* PhewAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F47197EB1E9E9EAC0022DFF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F407094B1E9C0F050025B591 /* FLIFImages */;
+			targetProxy = F47197EA1E9E9EAC0022DFF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F47197C71E9E4C1F0022DFF2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F47197C81E9E4C1F0022DFF2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F40709561E9C0F050025B591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5WX26Y89JP;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/headers";
+				INFOPLIST_FILE = FLIFImageQuickLookPlugin/Info.plist;
+				INSTALL_PATH = /Library/QuickLook;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.sveinbjorn.FLIFImageQuickLookPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = qlgenerator;
+			};
+			name = Debug;
+		};
+		F40709571E9C0F050025B591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5WX26Y89JP;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/headers";
+				INFOPLIST_FILE = FLIFImageQuickLookPlugin/Info.plist;
+				INSTALL_PATH = /Library/QuickLook;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.sveinbjorn.FLIFImageQuickLookPlugin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				WRAPPER_EXTENSION = qlgenerator;
+			};
+			name = Release;
+		};
+		F47197CC1E9E4C1F0022DFF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sparkle",
+				);
+				INFOPLIST_FILE = Phew/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.sveinbjorn.Phew;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		F47197CD1E9E4C1F0022DFF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Sparkle",
+				);
+				INFOPLIST_FILE = Phew/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/libs",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = org.sveinbjorn.Phew;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+		F4898B441E9BD3C700C5F29D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/headers";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F4898B451E9BD3C700C5F29D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/headers";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F40709551E9C0F050025B591 /* Build configuration list for PBXNativeTarget "FLIFImages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F40709561E9C0F050025B591 /* Debug */,
+				F40709571E9C0F050025B591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F47197CB1E9E4C1F0022DFF2 /* Build configuration list for PBXNativeTarget "Phew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47197CC1E9E4C1F0022DFF2 /* Debug */,
+				F47197CD1E9E4C1F0022DFF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4898B2D1E9BD3C700C5F29D /* Build configuration list for PBXProject "Phew" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4898B441E9BD3C700C5F29D /* Debug */,
+				F4898B451E9BD3C700C5F29D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F4898B2A1E9BD3C700C5F29D /* Project object */;
+}

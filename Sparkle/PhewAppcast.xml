@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+    <channel>
+        <title>Phew Version Release Appcast</title>
+        <link>http://sveinbjorn.org/files/appcasts/PhewAppcast.xml</link>
+        <description>Most recent release list for Phew, with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>Version 1.0</title>
+            <pubDate>Sun, 18 Dec 2017 13:17:00 +0000</pubDate>
+            <enclosure url="http://sveinbjorn.org/files/software/phew/Phew-1.0.zip" sparkle:version="0" sparkle:shortVersionString="1.0" length="0" type="application/octet-stream" sparkle:dsaSignature=""/>
+            <sparkle:minimumSystemVersion>10.10.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[
+                <h2>New in Version 1.0</h2>
+                <ul>
+                    <li>Initial release</li>
+                </ul>
+            ]]></description>
+        </item>
+    </channel>
+</rss>
