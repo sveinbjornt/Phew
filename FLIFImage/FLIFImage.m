@@ -33,7 +33,7 @@
 #import <FLIF/flif.h>
 #import <AppKit/AppKit.h>
 
-static BOOL DecodeFLIFData(NSData *data, char **dstBuffer, size_t *bufSize, FLIF_IMAGE **image) {
+static NSData *DecodeFLIFData(NSData *data, FLIF_IMAGE **image) {
     
     FLIF_DECODER *flif_dec = flif_create_decoder();
     if (!flif_dec) {
@@ -41,8 +41,7 @@ static BOOL DecodeFLIFData(NSData *data, char **dstBuffer, size_t *bufSize, FLIF
         return 0;
     }
     
-    int ret = flif_decoder_decode_memory(flif_dec, [data bytes], [data length]);
-    NSLog(@"Decode result: %d", ret);
+    flif_decoder_decode_memory(flif_dec, [data bytes], [data length]);
     
     // returns the number of frames (1 if it is not an animation)
     size_t image_count = flif_decoder_num_images(flif_dec);
@@ -53,7 +52,7 @@ static BOOL DecodeFLIFData(NSData *data, char **dstBuffer, size_t *bufSize, FLIF
     }
     
     int count = 0;
-    FLIF_IMAGE *flifimage = *image;
+    FLIF_IMAGE *flifimage;
     flifimage = flif_decoder_get_image(flif_dec, count);
     if (flifimage == NULL) {
         flif_destroy_decoder(flif_dec);
@@ -87,10 +86,7 @@ static BOOL DecodeFLIFData(NSData *data, char **dstBuffer, size_t *bufSize, FLIF
     
     flif_destroy_decoder(flif_dec);
 
-    *dstBuffer = buf;
-    *bufSize = byte_length;
-
-    return 1;
+    return [NSData dataWithBytesNoCopy:buf length:byte_length freeWhenDone:YES];
 }
 
 @implementation FLIFImage
@@ -132,23 +128,20 @@ static BOOL DecodeFLIFData(NSData *data, char **dstBuffer, size_t *bufSize, FLIF
 + (CGImageRef)CGImageFromFLIFImageFileAtPath:(NSString *)path {
     
     NSData *data = [NSData dataWithContentsOfFile:path];
-    if (data == nil) {
-        return nil;
+    if (data) {
+        return [FLIFImage CGImageFromFLIFData:data];
     }
     
-    return [FLIFImage CGImageFromFLIFData:data];
+    return nil;
 }
 
 #pragma mark - 
 
 + (NSImage *)imageFromFLIFData:(NSData *)data {
     
-    char *pixelBuffer;
-    size_t bufSize;
     FLIF_IMAGE *flifimage;
-    
-    BOOL success = DecodeFLIFData(data, &pixelBuffer, &bufSize, &flifimage);
-    if (success == NO) {
+    NSData *pixelData = DecodeFLIFData(data, &flifimage);
+    if (pixelData == nil) {
         return nil;
     }
     
@@ -156,13 +149,11 @@ static BOOL DecodeFLIFData(NSData *data, char **dstBuffer, size_t *bufSize, FLIF
     size_t w = flif_image_get_width(flifimage);
     size_t h = flif_image_get_height(flifimage);
     size_t row_length = w * 4;
-    size_t byte_length = h * row_length;
-    //    size_t depth = flif_image_get_depth(flifimage);
     size_t channels = flif_image_get_nb_channels(flifimage);
     BOOL has_alpha = (channels > 3);
     
     // Create bitmap image rep
-    //char *planes[] = { rgba };
+    //char *planes[] = { [pixelData bytes] };
     NSBitmapImageRep *imageRep = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:NULL
                                                                          pixelsWide:w
                                                                          pixelsHigh:h
@@ -176,13 +167,11 @@ static BOOL DecodeFLIFData(NSData *data, char **dstBuffer, size_t *bufSize, FLIF
                                                                        bitsPerPixel:4*8];
     if (imageRep == nil) {
         NSLog(@"Failed to create bitmap image rep");
-        free(pixelBuffer);
         return nil;
     }
     
     // Copy pixel data over, that way it's no longer our responsibility
-    memcpy([imageRep bitmapData], pixelBuffer, byte_length);
-    free(pixelBuffer);
+    memcpy([imageRep bitmapData], [pixelData bytes], [pixelData length]);
     
     // Create NSImage
     NSImage *image = [[NSImage alloc] initWithSize:NSMakeSize(w, h)];
@@ -196,27 +185,21 @@ static BOOL DecodeFLIFData(NSData *data, char **dstBuffer, size_t *bufSize, FLIF
 
 + (CGImageRef)CGImageFromFLIFData:(NSData *)data {
     
-    char *pixelBuffer;
-    size_t bufSize;
     FLIF_IMAGE *flifimage;
-    
-    BOOL success = DecodeFLIFData(data, &pixelBuffer, &bufSize, &flifimage);
-    if (success == NO) {
-        return NULL;
+    NSData *pixelData = DecodeFLIFData(data, &flifimage);
+    if (pixelData == nil) {
+        return nil;
     }
     
     // Get image info
     size_t w = flif_image_get_width(flifimage);
     size_t h = flif_image_get_height(flifimage);
     size_t row_length = w * 4;
-    size_t byte_length = h * row_length;
-//    size_t depth = flif_image_get_depth(flifimage);
     size_t channels = flif_image_get_nb_channels(flifimage);
     BOOL has_alpha = (channels > 3);
 
     // Create CGImage
-    CFDataRef rgbData = CFDataCreate(NULL, (const UInt8 *)pixelBuffer, byte_length);
-    CGDataProviderRef provider = CGDataProviderCreateWithCFData(rgbData);
+    CGDataProviderRef provider = CGDataProviderCreateWithCFData((CFDataRef)pixelData);
     
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
     CGBitmapInfo info = has_alpha ? kCGBitmapByteOrderDefault | kCGImageAlphaLast : kCGBitmapByteOrderDefault;
@@ -233,11 +216,8 @@ static BOOL DecodeFLIFData(NSData *data, char **dstBuffer, size_t *bufSize, FLIF
                                           true,
                                           kCGRenderingIntentDefault);
     
-    CFRelease(rgbData);
     CGDataProviderRelease(provider);
     CGColorSpaceRelease(colorspace);
-    
-    free(pixelBuffer);
     
     return cgImageRef;
 }

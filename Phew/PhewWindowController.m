@@ -175,6 +175,11 @@ static BOOL CGImageWritePixelDataToFile(CGImageRef image, NSString *path) {
         [[viewController imageView] zoomImageToFit:self];
     }
 }
+    
+- (void)windowWillClose:(NSNotification *)notification {
+    [[viewController imageView] setImage:NULL imageProperties:@{}];
+    //[[viewController imageView] setImageWithURL:nil];
+}
 
 #pragma mark - Exporting
 

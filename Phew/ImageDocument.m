@@ -37,11 +37,13 @@
 
 @implementation ImageDocument
 
-- (void)dealloc {
-    if (self.cgImageRef) {
-        CGImageRelease(self.cgImageRef);
+- (void)close {
+    if (_cgImageRef) {
+        CGImageRelease(_cgImageRef);
     }
+    [super close];
 }
+
 
 + (BOOL)autosavesInPlace {
     return NO;
@@ -62,16 +64,15 @@
     *outError = [NSError errorWithDomain:NSCocoaErrorDomain
                                     code:NSFileReadUnknownError
                                 userInfo:nil];
-    
-    if (theData != nil) {
-        CGImageRef imgRef = [FLIFImage CGImageFromFLIFData:theData];
-        if (imgRef) {
-            self.cgImageRef = imgRef;
-            self.data = theData;
-            readSuccess = YES;
-            *outError = nil;
-        }
+        
+    CGImageRef imgRef = [FLIFImage CGImageFromFLIFData:theData];
+    if (imgRef) {
+        self.cgImageRef = imgRef;
+//        self.data = theData;
+        readSuccess = YES;
+        *outError = nil;
     }
+        
     return readSuccess;
 }
 

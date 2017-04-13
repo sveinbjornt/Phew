@@ -482,7 +482,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController storyboardIdentifier="Document Window Controller" id="jGA-0Y-lOj" customClass="PhewWindowController" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" id="Ckk-yw-fiv">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -537,7 +537,7 @@
                 </customView>
                 <userDefaultsController representsSharedInstance="YES" id="SJK-Py-5su"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="75" y="254"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -547,18 +547,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <ikImageView wantsLayer="YES" misplaced="YES" zoomFactor="0.0" autoresizes="NO" supportsDragAndDrop="NO" doubleClickOpensImageEditPanel="NO" id="tWu-UL-aAP">
+                            <ikImageView wantsLayer="YES" misplaced="YES" supportsDragAndDrop="NO" doubleClickOpensImageEditPanel="NO" id="dmR-Hl-VQw">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="deviceRGB"/>
-                                <connections>
-                                    <outlet property="menu" destination="zxi-ut-o83" id="g6A-gf-T1E"/>
-                                </connections>
+                                <color key="backgroundColor" red="0.50002289" green="0.50002289" blue="0.50002289" alpha="1" colorSpace="deviceRGB"/>
                             </ikImageView>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="tWu-UL-aAP" id="bf1-Xn-HI6"/>
+                        <outlet property="imageView" destination="dmR-Hl-VQw" id="1Qa-6X-sNb"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
