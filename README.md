@@ -1,6 +1,6 @@
 # Phew - FLIF Image Viewer for macOS
 
-<img align="right" src="doc/phew_icon.png" style="float: right; margin-left: 30px; max-width:128px; max-height:128px;" alt="Phew Application Icon">
+<img align="right" src="doc/phew_icon.png" style="float: right; margin-left: 30px; width:128px; height:128px;" alt="Phew Application Icon">
 
 **Phew** is an open-source <a href="http://flif.info">FLIF</a> image viewer and QuickLook plugin for macOS.
 
@@ -8,7 +8,8 @@ The <strong><a href="http://flif.info">Free Lossless Image Format</a></strong> o
 
 Phew can open and display FLIF images, and can export them to PNG, TIFF, BMP or as raw pixel data. If the accompanying QuickLook Plug-In is installed, FLIF images can be previewed and show thumbnails in the Finder and Spotlight just like regular images.
 
-* **[Download Phew 1.0](http://sveinbjorn.org/files/software/phew/Phew-1.0.zip)** (Intel 64-bit, 10.10 or later, ~1.9 MB)
+<!--
+* **[Download Phew 1.0](http://sveinbjorn.org/files/software/phew/Phew-1.0.zip)** (Intel 64-bit, 10.10 or later, ~1.9 MB)-->
 
 ## Screenshots
 
