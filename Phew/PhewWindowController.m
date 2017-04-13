@@ -32,7 +32,7 @@
 #import "ImageDocument.h"
 #import "ImageViewController.h"
 
-static inline NSRect aspectFitRectInRect(NSRect inRect, NSRect maxRect) {
+static inline NSRect AspectFitRectInRect(NSRect inRect, NSRect maxRect) {
     
     float originalAspectRatio = inRect.size.width / inRect.size.height;
     float maxAspectRatio = maxRect.size.width / maxRect.size.height;
@@ -77,9 +77,10 @@ static BOOL CGImageWritePixelDataToFile(CGImageRef image, NSString *path) {
     UInt8 *buf = (UInt8 *)CFDataGetBytePtr(rawData);
     CFIndex length = CFDataGetLength(rawData);
     
-    NSData *data = [NSData dataWithBytes:buf length:length];
+    NSData *data = [NSData dataWithBytesNoCopy:buf length:length];
     BOOL success = [data writeToFile:path atomically:NO];
     
+    data = nil;
     CFRelease(rawData);
     
     return success;
@@ -110,7 +111,7 @@ static BOOL CGImageWritePixelDataToFile(CGImageRef image, NSString *path) {
     NSString *filename = [[[self.document fileURL] path] lastPathComponent];
     
     
-    CGFloat zoom = [[(ImageViewController *)self.contentViewController imageView] zoomFactor];
+    CGFloat zoom = [[viewController imageView] zoomFactor];
     int perc = (int)(zoom*100.f);
     NSString *newTitle = [NSString stringWithFormat:@"%@ (%d x %d) @ %d%%",
                           filename, (int)imgSize.width, (int)imgSize.height, perc];
@@ -128,27 +129,27 @@ static BOOL CGImageWritePixelDataToFile(CGImageRef image, NSString *path) {
 #pragma mark - Window Sizing
 
 - (void)windowDidResize:(NSNotification *)notification {
+    [viewController windowDimensionsChanged];
     if (viewController.fitToSize) {
         [self updateTitle];
     }
-    [viewController windowDimensionsChanged];
 }
 
 - (float)titleBarHeight {
-    
     NSRect frame = NSMakeRect(0, 0, 100, 100);
     NSRect contentRect = [NSWindow contentRectForFrameRect:frame
                                                  styleMask:NSTitledWindowMask];
     return (frame.size.height - contentRect.size.height);
 }
 
-- (void)setToIdealSize {
+- (BOOL)setToIdealSize {
     
     NSRect visFrame = [[NSScreen mainScreen] visibleFrame];
     NSRect newFrame = visFrame;
     
     // We need to fit window with titlebar + image inside visible frame
-    NSSize imgSize = self.naturalSize;
+    ImageDocument *imgDoc = (ImageDocument *)self.document;
+    NSSize imgSize = [imgDoc dimensions];
     imgSize.height += [self titleBarHeight];
     
     BOOL fits = !(visFrame.size.width < imgSize.width || visFrame.size.height < imgSize.height);
@@ -156,7 +157,7 @@ static BOOL CGImageWritePixelDataToFile(CGImageRef image, NSString *path) {
     if (!fits) {
         // aspect fit
         NSRect naturalFrame = NSMakeRect(0,0, imgSize.width, imgSize.height);
-        newFrame = aspectFitRectInRect(naturalFrame, visFrame);
+        newFrame = AspectFitRectInRect(naturalFrame, visFrame);
         newFrame.origin.x = visFrame.origin.x;
     } else {
         newFrame.size = imgSize;
@@ -167,17 +168,7 @@ static BOOL CGImageWritePixelDataToFile(CGImageRef image, NSString *path) {
     
     [self.window setFrame:newFrame display:NO];
     
-    // adjust image view
-    if (fits) {
-        [[viewController imageView] setZoomFactor:1.0];
-    } else {
-        viewController.fitToSize = YES;
-        [[viewController imageView] zoomImageToFit:self];
-    }
-}
-    
-- (void)windowWillClose:(NSNotification *)notification {
-    //[[viewController imageView] setImageWithURL:nil];
+    return fits;    
 }
 
 #pragma mark - Exporting
@@ -206,14 +197,14 @@ static BOOL CGImageWritePixelDataToFile(CGImageRef image, NSString *path) {
         ImageDocument *imgDoc = (ImageDocument *)self.document;
         
         if ([format isEqualToString:@"Raw Pixel Data"]) {
-            CGImageWritePixelDataToFile(imgDoc.cgImageRef, path);
+            CGImageWritePixelDataToFile([imgDoc CGImage], path);
         } else {
             NSDictionary *formatMap = @{
                                         @"PNG":     (NSString *)kUTTypePNG,
                                         @"TIFF":    (NSString *)kUTTypeTIFF,
                                         @"BMP":     (NSString *)kUTTypeBMP
                                         };
-            CGImageWriteToFile(imgDoc.cgImageRef, path, formatMap[format]);
+            CGImageWriteToFile([imgDoc CGImage], path, formatMap[format]);
         }
         
     }];

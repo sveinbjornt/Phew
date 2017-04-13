@@ -58,7 +58,7 @@ OSStatus GeneratePreviewForURL(void *thisInterface, QLPreviewRequestRef preview,
     @autoreleasepool {
         
         NSString *path = [(__bridge NSURL *)url path];
-        CGImageRef cgImgRef = [FLIFImage CGImageFromFLIFImageFileAtPath:path];
+        CGImageRef cgImgRef = [FLIFImage newCGImageFromFLIFImageFileAtPath:path];
         
         if (cgImgRef == NULL) {
             QLPreviewRequestSetURLRepresentation(preview, url, contentTypeUTI, nil);

@@ -15,6 +15,7 @@
 		F451B4BF1E9F8CD300DE50FD /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = F451B4BE1E9F8CD300DE50FD /* Credits.html */; };
 		F451B4C91E9F94BC00DE50FD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4C81E9F94BC00DE50FD /* Sparkle.framework */; };
 		F451B4CA1E9F94E900DE50FD /* Sparkle.framework in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4C81E9F94BC00DE50FD /* Sparkle.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F451B4D51E9FCDB800DE50FD /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = F451B4CD1E9F995D00DE50FD /* dsa_pub.pem */; };
 		F47197BB1E9E4C1F0022DFF2 /* PhewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */; };
 		F47197BE1E9E4C1F0022DFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BD1E9E4C1F0022DFF2 /* main.m */; };
 		F47197C11E9E4C1F0022DFF2 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197C01E9E4C1F0022DFF2 /* ImageViewController.m */; };
@@ -462,6 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F451B4D51E9FCDB800DE50FD /* dsa_pub.pem in Resources */,
 				F47198281E9F0B190022DFF2 /* ReadMe.html in Resources */,
 				F451B4BF1E9F8CD300DE50FD /* Credits.html in Resources */,
 				F47197C61E9E4C1F0022DFF2 /* Assets.xcassets in Resources */,

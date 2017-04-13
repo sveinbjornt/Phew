@@ -37,10 +37,10 @@ extern NSImage *CreateNSImageFromFLIFImageAtURL(CFURLRef url);
 + (BOOL)isFLIFImageAtPath:(NSString *)path;
 + (BOOL)isFLIFImageData:(NSData *)data;
 
-+ (NSImage *)imageFromFLIFImageFileAtPath:(NSString *)path;
-+ (CGImageRef)CGImageFromFLIFImageFileAtPath:(NSString *)path;
++ (NSImage *)newImageFromFLIFImageFileAtPath:(NSString *)path;
++ (CGImageRef)newCGImageFromFLIFImageFileAtPath:(NSString *)path;
 
-+ (NSImage *)imageFromFLIFData:(NSData *)data;
-+ (CGImageRef)CGImageFromFLIFData:(NSData *)data;
++ (NSImage *)newImageFromFLIFData:(NSData *)data;
++ (CGImageRef)newCGImageFromFLIFData:(NSData *)data;
 
 @end

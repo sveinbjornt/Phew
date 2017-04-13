@@ -32,9 +32,9 @@
 
 @interface ImageDocument : NSDocument
 
-@property (assign) CGImageRef cgImageRef;
-@property (assign) NSData *data;
+@property (nonatomic, assign) NSData *data;
 @property (readonly) NSSize dimensions;
-
+@property (readonly) CGImageRef CGImage;
+    
 @end
 

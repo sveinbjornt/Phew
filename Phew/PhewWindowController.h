@@ -33,9 +33,7 @@
 
 @interface PhewWindowController : NSWindowController <NSWindowDelegate>
 
-@property NSSize naturalSize;
-
-- (void)setToIdealSize;
+- (BOOL)setToIdealSize;
 - (void)updateTitle;
 
 @end

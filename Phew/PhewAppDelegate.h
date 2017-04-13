@@ -30,8 +30,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-#define kPhewQuickLookPluginName @"FLIFImages"
-
 @interface PhewAppDelegate : NSObject <NSApplicationDelegate>
 
 @end

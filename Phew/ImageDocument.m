@@ -32,18 +32,23 @@
 #import "FLIFImage.h"
 
 @interface ImageDocument ()
-
+{
+    CGImageRef cgImage;
+}
 @end
 
 @implementation ImageDocument
 
+- (CGImageRef)CGImage {
+    return cgImage;
+}
+    
 - (void)close {
-    if (_cgImageRef) {
-        CGImageRelease(_cgImageRef);
+    if (cgImage) {
+        CGImageRelease(cgImage);
     }
     [super close];
 }
-
 
 + (BOOL)autosavesInPlace {
     return NO;
@@ -59,26 +64,24 @@
 }
 
 - (BOOL)readFromData:(NSData *)theData ofType:(NSString *)typeName error:(NSError **)outError {
-    
-    BOOL readSuccess = NO;
-    *outError = [NSError errorWithDomain:NSCocoaErrorDomain
-                                    code:NSFileReadUnknownError
-                                userInfo:nil];
-        
-    CGImageRef imgRef = [FLIFImage CGImageFromFLIFData:theData];
+
+    CGImageRef imgRef = [FLIFImage newCGImageFromFLIFData:theData];
     if (imgRef) {
-        self.cgImageRef = imgRef;
-//        self.data = theData;
-        readSuccess = YES;
-        *outError = nil;
+        cgImage = imgRef;
+        self.data = theData;
+        return YES;
     }
-        
-    return readSuccess;
+    
+    if (outError != nil) {
+        *outError = [NSError errorWithDomain:NSCocoaErrorDomain
+                                        code:NSFileReadUnknownError
+                                    userInfo:nil];
+    }
+    return NO;
 }
 
 - (NSSize)dimensions {
-    return NSMakeSize(CGImageGetWidth(self.cgImageRef),
-                      CGImageGetHeight(self.cgImageRef));
+    return NSMakeSize(CGImageGetWidth(cgImage), CGImageGetHeight(cgImage));
 }
 
 @end

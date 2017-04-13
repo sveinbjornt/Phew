@@ -32,6 +32,8 @@
 #import "QuickLookInstaller.h"
 #import "NSWorkspace+Additions.h"
 
+#define kPhewQuickLookPluginName @"FLIFImages"
+
 @interface PhewAppDelegate ()
 
 @property (weak) IBOutlet NSMenuItem *installStatusMenuItem;
@@ -53,8 +55,10 @@
         float appVersion = [plist[@"CFBundleShortVersionString"] floatValue];
         if (v == 0.f) {
             // suggest install
+            NSLog(@"Should install");
         } else if (v < appVersion) {
             // suggest update
+            NSLog(@"Should update");
         }
         
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"LaunchedPreviously"];

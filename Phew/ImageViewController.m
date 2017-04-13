@@ -35,6 +35,7 @@
 @interface ImageViewController ()
 {
     IBOutlet IKImageView *imageView;
+    IBOutlet NSScrollView *scrollView;
     PhewWindowController *windowController;
 }
 @end
@@ -46,12 +47,6 @@
 }
 
 #pragma mark -
-    
-- (void)viewDidDisappear {
-    [imageView setImage:NULL imageProperties:nil];
-    [imageView setImageWithURL:nil];
-    imageView = nil;
-}
 
 - (void)viewWillAppear {
     [super viewWillAppear];
@@ -64,6 +59,9 @@
         [imageView setAutoresizes:YES];
         [imageView setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
         [imageView setDelegate:self];
+        [imageView setBackgroundColor:[NSColor colorWithRed:0.87 green:0.87 blue:0.87 alpha:1.0]];
+        //[scrollView setDocumentView:imageView];
+        //[scrollView.documentView addSubview:imageView];
         [self.view addSubview:imageView];
     }
     
@@ -71,17 +69,35 @@
     ImageDocument *imgDoc = windowController.document;
     
     if (imgDoc) {
-        [imageView setImage:imgDoc.cgImageRef imageProperties:@{}];
-        windowController.naturalSize = [imgDoc dimensions];
-        [windowController setToIdealSize];
+        
+        [imageView setImage:[imgDoc CGImage] imageProperties:@{}];        
+        
+        BOOL fits = [windowController setToIdealSize];
+        if (fits) {
+            [imageView setZoomFactor:1.0];
+        } else {
+            self.fitToSize = YES;
+            [imageView zoomImageToFit:self];
+        }
+
+        
         [windowController updateTitle];
         [self setRepresentedObject:imgDoc];
     }
 }
+    
+- (void)viewDidDisappear {
+    [imageView setImage:NULL imageProperties:nil];
+    [imageView setImageWithURL:nil];
+    imageView = nil;
+}
 
 - (void)windowDimensionsChanged {
     if (self.fitToSize) {
+        [CATransaction begin];
+        [CATransaction setValue:@(0.f) forKey:kCATransactionAnimationDuration];
         [imageView zoomImageToFit:self];
+        [CATransaction commit];
     }
 }
     
@@ -90,14 +106,11 @@
 -(void) imageWillChange: (IKImageView *) imageView {
     
 }
-    
+
 #pragma mark -
 
-- (IBAction)viewSizeMenuSelected:(id)sender {
-     [self viewSizeChangeSelected:[sender title]];
-}
-
-- (void)viewSizeChangeSelected:(NSString *)str {
+- (IBAction)imageScaleChangedInMenu:(id)sender {
+     NSString *str = [sender title];
     
     if ([str isEqualToString:@"Zoom to Fit"]) {
         [self zoomToFit:self];
