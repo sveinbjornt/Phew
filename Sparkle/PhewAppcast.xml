@@ -8,7 +8,7 @@
         <item>
             <title>Version 1.0</title>
             <pubDate>Fri, 13 Apr 2017 14:40:00 +0000</pubDate>
-            <enclosure url="http://sveinbjorn.org/files/software/phew/Phew-1.0.zip" sparkle:version="8" sparkle:shortVersionString="1.0" length="0" type="application/octet-stream" sparkle:dsaSignature="MCwCFE5SmtCAhfiJSIFzeZmwiyJZDIIdAhR8WL/rtAW/QyBvOGHwjJdfqTucfQ=="/>
+            <enclosure url="http://sveinbjorn.org/files/software/phew/Phew-1.0.zip" sparkle:version="9" sparkle:shortVersionString="1.0" length="1672223" type="application/octet-stream" sparkle:dsaSignature="MCwCFF7ytQjt8Qsgh/liuK0YRWHTQQIEAhRXaKW9DUmPYzrrR1ZVrNJ58GTW9w=="/>
             <sparkle:minimumSystemVersion>10.10.0</sparkle:minimumSystemVersion>
             <description><![CDATA[
                 <h2>New in Version 1.0</h2>
