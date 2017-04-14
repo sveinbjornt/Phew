@@ -30,8 +30,6 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSImage *CreateNSImageFromFLIFImageAtURL(CFURLRef url);
-
 @interface FLIFImage : NSObject
 
 + (BOOL)isFLIFImageAtPath:(NSString *)path;
