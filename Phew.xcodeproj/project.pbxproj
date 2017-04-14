@@ -13,10 +13,10 @@
 		F445ABAE1E9D175A000158FD /* FLIFImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F445ABAC1E9D175A000158FD /* FLIFImage.h */; };
 		F445ABAF1E9D175A000158FD /* FLIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F445ABAD1E9D175A000158FD /* FLIFImage.m */; };
 		F451B4BF1E9F8CD300DE50FD /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = F451B4BE1E9F8CD300DE50FD /* Credits.html */; };
-		F451B4C91E9F94BC00DE50FD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4C81E9F94BC00DE50FD /* Sparkle.framework */; };
-		F451B4CA1E9F94E900DE50FD /* Sparkle.framework in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4C81E9F94BC00DE50FD /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F451B4D51E9FCDB800DE50FD /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = F451B4CD1E9F995D00DE50FD /* dsa_pub.pem */; };
 		F451B4DC1EA103D000DE50FD /* Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B4DB1EA103D000DE50FD /* Alerts.m */; };
+		F451B4DF1EA1153000DE50FD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4DD1EA1150F00DE50FD /* Sparkle.framework */; };
+		F451B4E01EA1154F00DE50FD /* Sparkle.framework in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4DD1EA1150F00DE50FD /* Sparkle.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F47197BB1E9E4C1F0022DFF2 /* PhewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */; };
 		F47197BE1E9E4C1F0022DFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BD1E9E4C1F0022DFF2 /* main.m */; };
 		F47197C11E9E4C1F0022DFF2 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197C01E9E4C1F0022DFF2 /* ImageViewController.m */; };
@@ -35,7 +35,7 @@
 		F47197F41E9EFC9C0022DFF2 /* libflif.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; };
 		F47197F51E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; };
 		F47197F61E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; };
-		F47197F71E9EFCB50022DFF2 /* libflif.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F47197F71E9EFCB50022DFF2 /* libflif.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; };
 		F47197F91E9EFCBE0022DFF2 /* libflif.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F47197FA1E9EFCC00022DFF2 /* libpng.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F47198061E9F01E10022DFF2 /* flif-interface-private.hpp in Headers */ = {isa = PBXBuildFile; fileRef = F47197FE1E9F01E10022DFF2 /* flif-interface-private.hpp */; };
@@ -46,7 +46,7 @@
 		F471980B1E9F01E10022DFF2 /* flif_common.h in Headers */ = {isa = PBXBuildFile; fileRef = F47198031E9F01E10022DFF2 /* flif_common.h */; };
 		F471980C1E9F01E10022DFF2 /* flif_dec.h in Headers */ = {isa = PBXBuildFile; fileRef = F47198041E9F01E10022DFF2 /* flif_dec.h */; };
 		F471980D1E9F01E10022DFF2 /* flif_enc.h in Headers */ = {isa = PBXBuildFile; fileRef = F47198051E9F01E10022DFF2 /* flif_enc.h */; };
-		F47198121E9F06470022DFF2 /* libpng.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		F47198121E9F06470022DFF2 /* libpng.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; };
 		F47198281E9F0B190022DFF2 /* ReadMe.html in Resources */ = {isa = PBXBuildFile; fileRef = F47198271E9F0B190022DFF2 /* ReadMe.html */; };
 		F471982A1E9F0B200022DFF2 /* License.html in Resources */ = {isa = PBXBuildFile; fileRef = F47198291E9F0B200022DFF2 /* License.html */; };
 		F47198311E9F0C100022DFF2 /* NSWorkspace+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F47198301E9F0C100022DFF2 /* NSWorkspace+Additions.m */; };
@@ -83,7 +83,7 @@
 			files = (
 				F47197F71E9EFCB50022DFF2 /* libflif.dylib in Copy to Frameworks */,
 				F47198121E9F06470022DFF2 /* libpng.dylib in Copy to Frameworks */,
-				F451B4CA1E9F94E900DE50FD /* Sparkle.framework in Copy to Frameworks */,
+				F451B4E01EA1154F00DE50FD /* Sparkle.framework in Copy to Frameworks */,
 			);
 			name = "Copy to Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +107,6 @@
 		F451B4C41E9F8F8D00DE50FD /* phew_screenshot3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = phew_screenshot3.jpg; path = doc/phew_screenshot3.jpg; sourceTree = "<group>"; };
 		F451B4C51E9F8F8D00DE50FD /* phew_screenshot4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = phew_screenshot4.jpg; path = doc/phew_screenshot4.jpg; sourceTree = "<group>"; };
 		F451B4C61E9F8F8D00DE50FD /* TODO.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = TODO.txt; path = doc/TODO.txt; sourceTree = "<group>"; };
-		F451B4C81E9F94BC00DE50FD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Sparkle/Sparkle.framework; sourceTree = "<group>"; };
 		F451B4CC1E9F995D00DE50FD /* dsa_priv.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_priv.pem; sourceTree = "<group>"; };
 		F451B4CD1E9F995D00DE50FD /* dsa_pub.pem */ = {isa = PBXFileReference; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		F451B4CE1E9F995D00DE50FD /* generate_keys.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = generate_keys.rb; sourceTree = "<group>"; };
@@ -116,6 +115,7 @@
 		F451B4D21E9F995D00DE50FD /* update_appcast.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = update_appcast.sh; sourceTree = "<group>"; };
 		F451B4DA1EA103D000DE50FD /* Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alerts.h; sourceTree = "<group>"; };
 		F451B4DB1EA103D000DE50FD /* Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerts.m; sourceTree = "<group>"; };
+		F451B4DD1EA1150F00DE50FD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Sparkle/Sparkle.framework; sourceTree = "<group>"; };
 		F47197B71E9E4C1F0022DFF2 /* Phew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47197B91E9E4C1F0022DFF2 /* PhewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhewAppDelegate.h; sourceTree = "<group>"; };
 		F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhewAppDelegate.m; sourceTree = "<group>"; };
@@ -168,8 +168,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F451B4DF1EA1153000DE50FD /* Sparkle.framework in Frameworks */,
 				F47197DC1E9E6EDE0022DFF2 /* CoreServices.framework in Frameworks */,
-				F451B4C91E9F94BC00DE50FD /* Sparkle.framework in Frameworks */,
 				F47197D91E9E61330022DFF2 /* Quartz.framework in Frameworks */,
 				F47197DA1E9E61330022DFF2 /* QuartzCore.framework in Frameworks */,
 				F47197F61E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */,
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				F47197FB1E9F01B60022DFF2 /* libs */,
-				F451B4C81E9F94BC00DE50FD /* Sparkle.framework */,
+				F451B4DD1EA1150F00DE50FD /* Sparkle.framework */,
 				F47197DB1E9E6EDE0022DFF2 /* CoreServices.framework */,
 				F47197D71E9E61330022DFF2 /* Quartz.framework */,
 				F47197D81E9E61330022DFF2 /* QuartzCore.framework */,
