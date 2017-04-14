@@ -14,8 +14,9 @@
 		F445ABAF1E9D175A000158FD /* FLIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F445ABAD1E9D175A000158FD /* FLIFImage.m */; };
 		F451B4BF1E9F8CD300DE50FD /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = F451B4BE1E9F8CD300DE50FD /* Credits.html */; };
 		F451B4C91E9F94BC00DE50FD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4C81E9F94BC00DE50FD /* Sparkle.framework */; };
-		F451B4CA1E9F94E900DE50FD /* Sparkle.framework in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4C81E9F94BC00DE50FD /* Sparkle.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F451B4CA1E9F94E900DE50FD /* Sparkle.framework in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4C81E9F94BC00DE50FD /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F451B4D51E9FCDB800DE50FD /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = F451B4CD1E9F995D00DE50FD /* dsa_pub.pem */; };
+		F451B4DC1EA103D000DE50FD /* Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B4DB1EA103D000DE50FD /* Alerts.m */; };
 		F47197BB1E9E4C1F0022DFF2 /* PhewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */; };
 		F47197BE1E9E4C1F0022DFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BD1E9E4C1F0022DFF2 /* main.m */; };
 		F47197C11E9E4C1F0022DFF2 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197C01E9E4C1F0022DFF2 /* ImageViewController.m */; };
@@ -113,6 +114,8 @@
 		F451B4CF1E9F995D00DE50FD /* PhewAppcast.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PhewAppcast.xml; sourceTree = "<group>"; };
 		F451B4D01E9F995D00DE50FD /* sign_update.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = sign_update.rb; sourceTree = "<group>"; };
 		F451B4D21E9F995D00DE50FD /* update_appcast.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = update_appcast.sh; sourceTree = "<group>"; };
+		F451B4DA1EA103D000DE50FD /* Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alerts.h; sourceTree = "<group>"; };
+		F451B4DB1EA103D000DE50FD /* Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerts.m; sourceTree = "<group>"; };
 		F47197B71E9E4C1F0022DFF2 /* Phew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47197B91E9E4C1F0022DFF2 /* PhewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhewAppDelegate.h; sourceTree = "<group>"; };
 		F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhewAppDelegate.m; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				F47198301E9F0C100022DFF2 /* NSWorkspace+Additions.m */,
 				F47197E41E9E93840022DFF2 /* STPrivilegedTask.h */,
 				F47197E51E9E93840022DFF2 /* STPrivilegedTask.m */,
+				F451B4DA1EA103D000DE50FD /* Alerts.h */,
+				F451B4DB1EA103D000DE50FD /* Alerts.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -316,9 +321,9 @@
 		F471982E1E9F0B380022DFF2 /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				F451B4C61E9F8F8D00DE50FD /* TODO.txt */,
 				F47198251E9F0B020022DFF2 /* README.md */,
 				F47198271E9F0B190022DFF2 /* ReadMe.html */,
-				F451B4C61E9F8F8D00DE50FD /* TODO.txt */,
 				F47198291E9F0B200022DFF2 /* License.html */,
 				F451B4C01E9F8F8D00DE50FD /* Markdown.pl */,
 				F451B4C71E9F8FC500DE50FD /* images */,
@@ -487,7 +492,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n\nrm -Rf \"/Library/QuickLook/${FULL_PRODUCT_NAME}\"\ncp -R \"$BUILT_PRODUCTS_DIR/${FULL_PRODUCT_NAME}\" /Library/QuickLook/\nqlmanage -r";
+			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n\n#rm -Rf \"/Library/QuickLook/${FULL_PRODUCT_NAME}\"\n#cp -R \"$BUILT_PRODUCTS_DIR/${FULL_PRODUCT_NAME}\" /Library/QuickLook/\n#qlmanage -r";
 		};
 		F47197D21E9E4D880022DFF2 /* Run Script to fix linking in libflif */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -552,6 +557,7 @@
 			files = (
 				F47197C41E9E4C1F0022DFF2 /* ImageDocument.m in Sources */,
 				F47197D51E9E536D0022DFF2 /* PhewWindowController.m in Sources */,
+				F451B4DC1EA103D000DE50FD /* Alerts.m in Sources */,
 				F47197E61E9E93840022DFF2 /* STPrivilegedTask.m in Sources */,
 				F47197CE1E9E4D5A0022DFF2 /* FLIFImage.m in Sources */,
 				F47198311E9F0C100022DFF2 /* NSWorkspace+Additions.m in Sources */,

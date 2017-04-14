@@ -1,6 +1,6 @@
 /*
- Phew - native, open-source FLIF image viewer for macOS
- Copyright (c) 2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
+ Copyright (c) 2003-2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
+ All rights reserved.
  
  Redistribution and use in source and binary forms, with or without modification,
  are permitted provided that the following conditions are met:
@@ -26,17 +26,25 @@
  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
-*/
+ */
 
-#import <Cocoa/Cocoa.h>
-#import <Quartz/Quartz.h>
+#import <Foundation/Foundation.h>
+#import <AppKit/AppKit.h>
 
-@interface ImageViewController : NSViewController
+@interface Alerts : NSObject
 
-- (IKImageView *)imageView;
-- (void)windowDimensionsChanged;
++ (void)alert:(NSString *)message subText:(NSString *)subtext style:(NSAlertStyle)style;
++ (void)alert:(NSString *)message subText:(NSString *)subtext;
++ (void)alert:(NSString *)message subTextFormat:(NSString *)formatString, ...;
 
-@property BOOL fitToSize;
++ (void)fatalAlert:(NSString *)message subText:(NSString *)subtext;
++ (void)fatalAlert:(NSString *)message subTextFormat:(NSString *)formatString, ...;
+
++ (void)sheetAlert:(NSString *)message forWindow:(NSWindow *)window subTextFormat:(NSString *)formatString, ...;
++ (void)sheetAlert:(NSString *)message subText:(NSString *)subtext forWindow:(NSWindow *)window;
++ (void)sheetAlert:(NSString *)message subText:(NSString *)subtext style:(NSAlertStyle)style forWindow:(NSWindow *)window;
+
++ (NSModalResponse)proceedAlert:(NSString *)message subText:(NSString *)subtext withActionsNamed:(NSArray *)actionNames;
++ (BOOL)proceedAlert:(NSString *)message subText:(NSString *)subtext withActionNamed:(NSString *)action;
 
 @end
-

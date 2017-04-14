@@ -38,7 +38,7 @@
 + (NSArray *)installLocationsForPlugin:(NSString *)pluginName {
     
     NSString *libQLPluginPath = [NSString stringWithFormat:@"%@%@.qlgenerator", kQuickLookLibraryFolder, pluginName];
-    NSString *homeQLPluginPath = [NSString stringWithFormat:@"%@%@.qlgenerator", kQuickLookHomeFolder, pluginName];
+    NSString *homeQLPluginPath = [NSString stringWithFormat:@"%@/%@.qlgenerator", kQuickLookHomeFolder, pluginName];
     
     NSMutableArray *items = [NSMutableArray array];
     
@@ -47,9 +47,9 @@
         if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
             NSString *plistPath = [NSString stringWithFormat:@"%@/Contents/Info.plist", path];
             NSDictionary *plist = [NSDictionary dictionaryWithContentsOfFile:plistPath];
-            NSString *bundleVersion = plist[@"CFBundleShortVersionString"];
+            float bundleVersion = [plist[@"CFBundleShortVersionString"] floatValue];
             
-            NSDictionary *itemInfo = @{ @"path": path, @"version": @((float)[bundleVersion floatValue]) };
+            NSDictionary *itemInfo = @{ @"path": path, @"version": [NSNumber numberWithFloat:bundleVersion] };
             [items addObject:itemInfo];
         }
     }

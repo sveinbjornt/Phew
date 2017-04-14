@@ -31,6 +31,7 @@
 #import "PhewAppDelegate.h"
 #import "QuickLookInstaller.h"
 #import "NSWorkspace+Additions.h"
+#import "Alerts.h"
 
 #define kPhewQuickLookPluginName @"FLIFImages"
 
@@ -39,8 +40,6 @@
 @property (weak) IBOutlet NSMenuItem *installStatusMenuItem;
 @property (weak) IBOutlet NSMenuItem *installActionMenuItem;
 
-- (IBAction)installQuickLookPlugin:(id)sender;
-
 @end
 
 @implementation PhewAppDelegate
@@ -48,20 +47,38 @@
 #pragma mark - NSApplicationDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"LaunchedPreviously"] == NO) {
     
-        CGFloat v = [QuickLookInstaller versionCurrentlyInstalled:kPhewQuickLookPluginName];
+    // Check what version of plug-in is installed and prompt
+    // the user to upgrade if it's an old version
+    CGFloat qlVersionInstalled = [QuickLookInstaller versionCurrentlyInstalled:kPhewQuickLookPluginName];
+
+    if (qlVersionInstalled) {
         NSDictionary *plist = [[NSBundle mainBundle] infoDictionary];
         float appVersion = [plist[@"CFBundleShortVersionString"] floatValue];
-        if (v == 0.f) {
-            // suggest install
-            NSLog(@"Should install");
-        } else if (v < appVersion) {
+        if (qlVersionInstalled < appVersion) {
+            
             // suggest update
-            NSLog(@"Should update");
+            if ([Alerts proceedAlert:@"Old Plug-In Version Installed"
+                              subText:@"An old version of the QuickLook plugin is installed. Would you like to upgrade it?"
+                      withActionNamed:@"Upgrade"]) {
+            
+                if ([self uninstallQuickLookPlugin]) {
+                    [self installQuickLookPlugin];
+                }
+            }
+        }
+    }
+    
+    // Prompt to install plugi-in on app's first launch
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"AppLaunchedPreviously"] == NO && !qlVersionInstalled) {
+        NSString *txt = [NSString stringWithFormat:@"Would you like to install the %@ Plug-In?", kPhewQuickLookPluginName];
+        if ([Alerts proceedAlert:@"Install QuickLook Plug-In?"
+                         subText:txt
+                withActionsNamed:@[@"Install", @"Don't Install"]] == NSAlertFirstButtonReturn) {
+            [self installQuickLookPlugin];
         }
         
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"LaunchedPreviously"];
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"AppLaunchedPreviously"];
     }
     
     [self updateQLPluginInstallStatus];
@@ -86,16 +103,55 @@
     [self.installActionMenuItem setTitle:actionTitle];
 }
 
-- (IBAction)installQuickLookPlugin:(id)sender {
-    NSString *pluginName = kPhewQuickLookPluginName;
+- (IBAction)pluginActionMenuItemSelected:(id)sender {
+    
     if ([[sender title] hasPrefix:@"Uninstall"]) {
-        [QuickLookInstaller uninstallPlugin:pluginName];
+        [self uninstallQuickLookPlugin];
     } else {
-        NSString *pluginPath = [[NSBundle mainBundle] pathForResource:pluginName ofType:@"qlgenerator"];
-        [QuickLookInstaller installPluginAtPath:pluginPath forUserOnly:NO];
+        [self installQuickLookPlugin];
+    }
+}
+    
+- (BOOL)installQuickLookPlugin {
+    NSString *p = kPhewQuickLookPluginName;
+
+    // ask if for user only
+    NSString *txt = [NSString stringWithFormat:@"Do you want to install the %@ Plug-In for all users on this system?", p];
+    NSModalResponse res = [Alerts proceedAlert:@"Install for all users?"
+                                       subText:txt
+                              withActionsNamed:@[@"All Users", @"This User Only"]];
+    
+    BOOL userOnly = (res != NSAlertFirstButtonReturn);
+    
+    NSString *pluginPath = [[NSBundle mainBundle] pathForResource:p ofType:@"qlgenerator"];
+    
+    if ([QuickLookInstaller installPluginAtPath:pluginPath forUserOnly:userOnly]) {
+        [Alerts alert:@"QuickLook Plug-In Installed"
+              subText:[NSString stringWithFormat:@"%@ Plug-In was successfully installed.", p]
+                style:NSAlertStyleInformational];
+    } else {
+        [Alerts alert:@"Install Failed!" subTextFormat:@"Failed to install %@ Plug-In", p];
+        return NO;
     }
     
-    [self performSelector:@selector(updateQLPluginInstallStatus) withObject:nil afterDelay:1.0f];
+    [self performSelector:@selector(updateQLPluginInstallStatus) withObject:nil afterDelay:0.5f];
+    return YES;
+}
+    
+- (BOOL)uninstallQuickLookPlugin {
+    NSString *p = kPhewQuickLookPluginName;
+    
+    if ([QuickLookInstaller uninstallPlugin:p]) {
+        [Alerts alert:@"QuickLook Plug-In Uninstalled"
+              subText:[NSString stringWithFormat:@"%@ Plug-In was successfully uninstalled from your system.", p]
+                style:NSAlertStyleInformational];
+    } else {
+        [Alerts alert:@"Uninstall Failed!" subTextFormat:@"Failed to uninstall %@ Plug-In", p];
+        return NO;
+    }
+    
+    [self performSelector:@selector(updateQLPluginInstallStatus) withObject:nil afterDelay:0.5f];
+    return YES;
 }
 
 #pragma mark - Web Links

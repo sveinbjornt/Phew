@@ -23,6 +23,12 @@
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem title="Check for Updates…" id="45G-S9-B5h">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="checkForUpdates:" target="uN5-mf-hG7" id="oq6-o9-HcU"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
                                         <menuItem title="Services" id="NMo-om-nkz">
                                             <modifierMask key="keyEquivalentModifierMask"/>
@@ -100,7 +106,7 @@
                                         <menuItem title="Install QuickLook Plugin" id="veR-L3-vWl">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <action selector="installQuickLookPlugin:" target="Voe-Tx-rLC" id="AtF-EI-zoM"/>
+                                                <action selector="pluginActionMenuItemSelected:" target="Voe-Tx-rLC" id="B5P-vT-jQs"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="trp-RT-8i0"/>
@@ -344,48 +350,48 @@
                                     <items>
                                         <menuItem title="Zoom to Fit" keyEquivalent="1" id="hkB-cj-Bi2">
                                             <connections>
-                                                <action selector="viewSizeMenuSelected:" target="Ady-hI-5gd" id="rak-B5-a0k"/>
+                                                <action selector="imageScaleChangedInMenu:" target="Ady-hI-5gd" id="t5f-n9-k6j"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="6g0-BX-efg"/>
                                         <menuItem title="100% Size" keyEquivalent="0" id="qEc-2R-XSH">
                                             <connections>
-                                                <action selector="viewSizeMenuSelected:" target="Ady-hI-5gd" id="Vbt-2G-YO3"/>
+                                                <action selector="imageScaleChangedInMenu:" target="Ady-hI-5gd" id="duZ-N4-DNx"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="75% Size" keyEquivalent="9" id="eVP-Cc-ziY">
                                             <connections>
-                                                <action selector="viewSizeMenuSelected:" target="Ady-hI-5gd" id="3yC-uT-tsk"/>
+                                                <action selector="imageScaleChangedInMenu:" target="Ady-hI-5gd" id="KIL-zr-HME"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="50% Size" keyEquivalent="8" id="xXa-dM-qah">
                                             <connections>
-                                                <action selector="viewSizeMenuSelected:" target="Ady-hI-5gd" id="qKv-6x-Cpk"/>
+                                                <action selector="imageScaleChangedInMenu:" target="Ady-hI-5gd" id="Nfr-G3-ytc"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="25% Size" keyEquivalent="7" id="sis-Ax-88z">
                                             <connections>
-                                                <action selector="viewSizeMenuSelected:" target="Ady-hI-5gd" id="mP9-Q5-VOt"/>
+                                                <action selector="imageScaleChangedInMenu:" target="Ady-hI-5gd" id="B7O-Xh-3LR"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="10% Size" keyEquivalent="6" id="hm6-CG-myd">
                                             <connections>
-                                                <action selector="viewSizeMenuSelected:" target="Ady-hI-5gd" id="8Xo-Xg-FRw"/>
+                                                <action selector="imageScaleChangedInMenu:" target="Ady-hI-5gd" id="znp-7v-dmn"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="200% Size" keyEquivalent="5" id="VLe-F9-SjP">
                                             <connections>
-                                                <action selector="viewSizeMenuSelected:" target="Ady-hI-5gd" id="dxE-Sf-PQd"/>
+                                                <action selector="imageScaleChangedInMenu:" target="Ady-hI-5gd" id="SQA-Wo-gOx"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="300% Size" keyEquivalent="4" id="bla-xT-dvs">
                                             <connections>
-                                                <action selector="viewSizeMenuSelected:" target="Ady-hI-5gd" id="aHz-iB-aCA"/>
+                                                <action selector="imageScaleChangedInMenu:" target="Ady-hI-5gd" id="6gY-Bv-T3X"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem title="400% Size" keyEquivalent="3" id="xvy-yy-uqh">
                                             <connections>
-                                                <action selector="viewSizeMenuSelected:" target="Ady-hI-5gd" id="pZr-5D-0NB"/>
+                                                <action selector="imageScaleChangedInMenu:" target="Ady-hI-5gd" id="bNx-a9-L8d"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="hB3-LF-h0Y"/>
@@ -474,6 +480,7 @@
                     </connections>
                 </customObject>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="uN5-mf-hG7" customClass="SUUpdater"/>
             </objects>
             <point key="canvasLocation" x="-8" y="-336"/>
         </scene>

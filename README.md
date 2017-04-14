@@ -6,13 +6,16 @@
 
 The <strong><a href="http://flif.info">Free Lossless Image Format</a></strong> or <strong>FLIF</strong> is a novel lossless image format which outperforms PNG, lossless WebP, lossless BPG, lossless JPEG2000, and lossless JPEG XR in terms of compression ratio.
 
-Phew can open and display FLIF images, and can export them to PNG, TIFF, BMP or as raw pixel data. If the accompanying QuickLook Plug-In is installed, FLIF images show thumbnails and previews in the Finder and Spotlight just like regular images.
-s
-* **[Download Phew 1.0](http://sveinbjorn.org/files/software/phew/Phew-1.0.zip)** (Intel 64-bit, 10.10 or later, ~1.9 MB)
+Phew can open and display FLIF images, and can export them as PNG, TIFF, BMP or raw pixel data. If the accompanying QuickLook Plug-In is installed, FLIF images show thumbnails and previews in the Finder and Spotlight just like regular images.
+
+* **[Download Phew 1.0](http://sveinbjorn.org/files/software/phew/Phew-1.0.zip)** (Intel 64-bit, macOS 10.10 or later, ~1.9 MB)
 
 ## Screenshots
 
 <img src="doc/phew_screenshot1.jpg" style="max-width:100%;" alt="Phew Screenshot">
+
+<center><img src="doc/phew_screenshot5.png" style="max-width:100%;" alt="Phew Screenshot"></center>
+
 <img src="doc/phew_screenshot2.jpg" style="max-width:100%;" alt="Phew Screenshot">
 <img src="doc/phew_screenshot3.jpg" style="max-width:100%;" alt="Phew Screenshot">
 <img src="doc/phew_screenshot4.jpg" style="max-width:100%;" alt="Phew Screenshot">
