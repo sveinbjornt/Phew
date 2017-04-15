@@ -9,6 +9,7 @@ The <strong><a href="http://flif.info">Free Lossless Image Format</a></strong> o
 Phew can open and display FLIF images, and can export them as PNG, TIFF, BMP or raw pixel data. If the accompanying QuickLook Plug-In is installed, FLIF images show thumbnails and previews in the Finder and Spotlight just like regular images.
 
 * **[Download Phew 1.0](http://sveinbjorn.org/files/software/phew/Phew-1.0.zip)** (Intel 64-bit, macOS 10.10 or later, ~1.7 MB)
+* [Sample FLIF images](tree/master/sample-images)
 
 The Phew source code contains the <code>FLIFImage</code> class, which is an Objective-C wrapper to easily read images in the FLIF format via <code>libflif</code>. This class is available via <a href="https://cocoapods.org">CocoaPods</a>. See below for further info.
 
