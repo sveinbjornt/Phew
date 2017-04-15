@@ -506,7 +506,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}";
+			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n\ninstall_name_tool -change /usr/local/opt/libpng/lib/libpng16.16.dylib @loader_path/../Frameworks/libpng.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}";
 			showEnvVarsInLog = 0;
 		};
 		F47197F01E9EE7FA0022DFF2 /* Run Script to increment CFBundleVersion */ = {

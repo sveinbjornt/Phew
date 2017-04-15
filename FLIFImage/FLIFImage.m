@@ -53,8 +53,8 @@ static NSData *DecodeFLIFData(NSData *data, FLIF_IMAGE **image) {
     
     FLIF_IMAGE *flifimage;
     flifimage = flif_decoder_get_image(flif_dec, 0);
-    flif_destroy_decoder(flif_dec);
     if (flifimage == NULL) {
+        flif_destroy_decoder(flif_dec);
         NSLog(@"FLIF image is null from decoder");
         return nil;
     }
@@ -70,6 +70,7 @@ static NSData *DecodeFLIFData(NSData *data, FLIF_IMAGE **image) {
     // allocate buffer
     char *buf = calloc(byte_length, 1);
     if (!buf) {
+        flif_destroy_decoder(flif_dec);
         NSLog(@"Could not alloc memory");
         return nil;
     }
@@ -82,6 +83,8 @@ static NSData *DecodeFLIFData(NSData *data, FLIF_IMAGE **image) {
         idx += row_length;
     }
 
+    flif_destroy_decoder(flif_dec);
+    
     return [NSData dataWithBytesNoCopy:buf length:byte_length freeWhenDone:YES];
 }
 
