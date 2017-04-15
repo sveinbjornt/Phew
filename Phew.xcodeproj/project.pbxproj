@@ -107,7 +107,7 @@
 		F451B4DA1EA103D000DE50FD /* Alerts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alerts.h; sourceTree = "<group>"; };
 		F451B4DB1EA103D000DE50FD /* Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerts.m; sourceTree = "<group>"; };
 		F451B4DD1EA1150F00DE50FD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Sparkle/Sparkle.framework; sourceTree = "<group>"; };
-		F451B4E21EA2432400DE50FD /* FLIFImage.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FLIFImage.podspec; sourceTree = "<group>"; };
+		F451B4E21EA2432400DE50FD /* FLIFImage.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FLIFImage.podspec; sourceTree = SOURCE_ROOT; };
 		F451B4E81EA2449D00DE50FD /* flif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif.h; sourceTree = "<group>"; };
 		F451B4E91EA2449D00DE50FD /* flif_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif_common.h; sourceTree = "<group>"; };
 		F451B4EA1EA2449D00DE50FD /* flif_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif_dec.h; sourceTree = "<group>"; };
@@ -196,6 +196,7 @@
 		F445ABAB1E9D175A000158FD /* FLIFImage Class */ = {
 			isa = PBXGroup;
 			children = (
+				F451B4E21EA2432400DE50FD /* FLIFImage.podspec */,
 				F445ABAC1E9D175A000158FD /* FLIFImage.h */,
 				F451B50D1EA2553200DE50FD /* FLIFImage.m */,
 				F451B4E31EA2449D00DE50FD /* FLIF */,
@@ -311,7 +312,6 @@
 			isa = PBXGroup;
 			children = (
 				F471982E1E9F0B380022DFF2 /* Documentation */,
-				F451B4E21EA2432400DE50FD /* FLIFImage.podspec */,
 				F445ABAB1E9D175A000158FD /* FLIFImage Class */,
 				F407094D1E9C0F050025B591 /* FLIFImageQuickLookPlugin */,
 				F47197B81E9E4C1F0022DFF2 /* Phew Application */,
@@ -373,7 +373,6 @@
 				F47197B41E9E4C1F0022DFF2 /* Frameworks */,
 				F47197B51E9E4C1F0022DFF2 /* Resources */,
 				F47197D01E9E4D710022DFF2 /* Copy to Frameworks */,
-				F47197D21E9E4D880022DFF2 /* Run Script to fix linking in libflif */,
 				F47197F01E9EE7FA0022DFF2 /* Run Script to increment CFBundleVersion */,
 			);
 			buildRules = (
@@ -462,21 +461,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n\n#rm -Rf \"/Library/QuickLook/${FULL_PRODUCT_NAME}\"\n#cp -R \"$BUILT_PRODUCTS_DIR/${FULL_PRODUCT_NAME}\" /Library/QuickLook/\n#qlmanage -r";
-		};
-		F47197D21E9E4D880022DFF2 /* Run Script to fix linking in libflif */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script to fix linking in libflif";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "install_name_tool -change libflif.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n\ninstall_name_tool -change libpng @loader_path/../Frameworks/libpng.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}";
-			showEnvVarsInLog = 0;
 		};
 		F47197F01E9EE7FA0022DFF2 /* Run Script to increment CFBundleVersion */ = {
 			isa = PBXShellScriptBuildPhase;
