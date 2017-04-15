@@ -18,6 +18,10 @@
 		F451B4E01EA1154F00DE50FD /* Sparkle.framework in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4DD1EA1150F00DE50FD /* Sparkle.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F451B50E1EA2553200DE50FD /* FLIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B50D1EA2553200DE50FD /* FLIFImage.m */; };
 		F451B50F1EA2553200DE50FD /* FLIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B50D1EA2553200DE50FD /* FLIFImage.m */; };
+		F451B51C1EA27E1200DE50FD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F451B51B1EA27E1200DE50FD /* main.c */; };
+		F451B51E1EA27E1200DE50FD /* GetMetadataForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B51D1EA27E1200DE50FD /* GetMetadataForFile.m */; };
+		F451B5211EA27E1200DE50FD /* MySpotlightImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B5201EA27E1200DE50FD /* MySpotlightImporter.m */; };
+		F451B5261EA27E1200DE50FD /* FLIFSpotlightImporter.mdimporter in Resources */ = {isa = PBXBuildFile; fileRef = F451B5181EA27E1200DE50FD /* FLIFSpotlightImporter.mdimporter */; };
 		F47197BB1E9E4C1F0022DFF2 /* PhewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */; };
 		F47197BE1E9E4C1F0022DFF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197BD1E9E4C1F0022DFF2 /* main.m */; };
 		F47197C11E9E4C1F0022DFF2 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F47197C01E9E4C1F0022DFF2 /* ImageViewController.m */; };
@@ -46,6 +50,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		F451B5241EA27E1200DE50FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4898B2A1E9BD3C700C5F29D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F451B5171EA27E1200DE50FD;
+			remoteInfo = FLIFSpotlightImporter;
+		};
 		F47197EA1E9E9EAC0022DFF2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F4898B2A1E9BD3C700C5F29D /* Project object */;
@@ -113,6 +124,13 @@
 		F451B5111EA2596600DE50FD /* flif_dec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flif_dec.h; sourceTree = "<group>"; };
 		F451B5121EA2596600DE50FD /* flif_enc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flif_enc.h; sourceTree = "<group>"; };
 		F451B5131EA2596600DE50FD /* flif.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flif.h; sourceTree = "<group>"; };
+		F451B5181EA27E1200DE50FD /* FLIFSpotlightImporter.mdimporter */ = {isa = PBXFileReference; explicitFileType = "wrapper.spotlight-importer"; includeInIndex = 0; path = FLIFSpotlightImporter.mdimporter; sourceTree = BUILT_PRODUCTS_DIR; };
+		F451B51B1EA27E1200DE50FD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		F451B51D1EA27E1200DE50FD /* GetMetadataForFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetMetadataForFile.m; sourceTree = "<group>"; };
+		F451B51F1EA27E1200DE50FD /* FLIFSpotlightImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLIFSpotlightImporter.h; sourceTree = "<group>"; };
+		F451B5201EA27E1200DE50FD /* MySpotlightImporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySpotlightImporter.m; sourceTree = "<group>"; };
+		F451B5221EA27E1200DE50FD /* Importer Read Me.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Importer Read Me.txt"; sourceTree = "<group>"; };
+		F451B5231EA27E1200DE50FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F47197B71E9E4C1F0022DFF2 /* Phew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47197B91E9E4C1F0022DFF2 /* PhewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhewAppDelegate.h; sourceTree = "<group>"; };
 		F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhewAppDelegate.m; sourceTree = "<group>"; };
@@ -150,6 +168,13 @@
 				F48259751E9C32400026A442 /* AppKit.framework in Frameworks */,
 				F47197F31E9EFC9C0022DFF2 /* libflif.dylib in Frameworks */,
 				F47197F51E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F451B5151EA27E1200DE50FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,7 +255,29 @@
 				F451B4D01E9F995D00DE50FD /* sign_update.rb */,
 				F451B4D21E9F995D00DE50FD /* update_appcast.sh */,
 			);
-			path = Sparkle;
+			name = Sparkle;
+			path = ../Sparkle;
+			sourceTree = "<group>";
+		};
+		F451B5191EA27E1200DE50FD /* FLIFSpotlightImporter */ = {
+			isa = PBXGroup;
+			children = (
+				F451B51D1EA27E1200DE50FD /* GetMetadataForFile.m */,
+				F451B51F1EA27E1200DE50FD /* FLIFSpotlightImporter.h */,
+				F451B5201EA27E1200DE50FD /* MySpotlightImporter.m */,
+				F451B5221EA27E1200DE50FD /* Importer Read Me.txt */,
+				F451B5231EA27E1200DE50FD /* Info.plist */,
+				F451B51A1EA27E1200DE50FD /* Supporting Files */,
+			);
+			path = FLIFSpotlightImporter;
+			sourceTree = "<group>";
+		};
+		F451B51A1EA27E1200DE50FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F451B51B1EA27E1200DE50FD /* main.c */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F47197B81E9E4C1F0022DFF2 /* Phew Application */ = {
@@ -245,6 +292,7 @@
 				F47197C01E9E4C1F0022DFF2 /* ImageViewController.m */,
 				F47197C21E9E4C1F0022DFF2 /* ImageDocument.h */,
 				F47197C31E9E4C1F0022DFF2 /* ImageDocument.m */,
+				F451B4CB1E9F995D00DE50FD /* Sparkle */,
 				F47197E91E9E98E10022DFF2 /* Utils */,
 				F47197D61E9E53BC0022DFF2 /* Resources */,
 			);
@@ -307,7 +355,7 @@
 				F445ABAB1E9D175A000158FD /* FLIFImage Class */,
 				F407094D1E9C0F050025B591 /* FLIFImageQuickLookPlugin */,
 				F47197B81E9E4C1F0022DFF2 /* Phew Application */,
-				F451B4CB1E9F995D00DE50FD /* Sparkle */,
+				F451B5191EA27E1200DE50FD /* FLIFSpotlightImporter */,
 				F40709431E9BF77D0025B591 /* Frameworks */,
 				F4898B331E9BD3C700C5F29D /* Products */,
 			);
@@ -318,6 +366,7 @@
 			children = (
 				F407094C1E9C0F050025B591 /* FLIFImages.qlgenerator */,
 				F47197B71E9E4C1F0022DFF2 /* Phew.app */,
+				F451B5181EA27E1200DE50FD /* FLIFSpotlightImporter.mdimporter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -345,6 +394,7 @@
 				F40709491E9C0F050025B591 /* Headers */,
 				F407094A1E9C0F050025B591 /* Resources */,
 				F407095A1E9C16130025B591 /* CopyFiles */,
+				F451B52B1EA27FF100DE50FD /* Set CFBundleVersion from git commit count */,
 				F407095C1E9C162A0025B591 /* ShellScript */,
 			);
 			buildRules = (
@@ -356,6 +406,24 @@
 			productReference = F407094C1E9C0F050025B591 /* FLIFImages.qlgenerator */;
 			productType = "com.apple.product-type.bundle";
 		};
+		F451B5171EA27E1200DE50FD /* FLIFSpotlightImporter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F451B5271EA27E1200DE50FD /* Build configuration list for PBXNativeTarget "FLIFSpotlightImporter" */;
+			buildPhases = (
+				F451B5141EA27E1200DE50FD /* Sources */,
+				F451B5151EA27E1200DE50FD /* Frameworks */,
+				F451B5161EA27E1200DE50FD /* Resources */,
+				F451B52A1EA27FBD00DE50FD /* Set CFBundleVersion from git commit count */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FLIFSpotlightImporter;
+			productName = FLIFSpotlightImporter;
+			productReference = F451B5181EA27E1200DE50FD /* FLIFSpotlightImporter.mdimporter */;
+			productType = "com.apple.product-type.spotlight-importer";
+		};
 		F47197B61E9E4C1F0022DFF2 /* Phew */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F47197CB1E9E4C1F0022DFF2 /* Build configuration list for PBXNativeTarget "Phew" */;
@@ -365,12 +433,13 @@
 				F47197B41E9E4C1F0022DFF2 /* Frameworks */,
 				F47197B51E9E4C1F0022DFF2 /* Resources */,
 				F47197D01E9E4D710022DFF2 /* Copy to Frameworks */,
-				F47197F01E9EE7FA0022DFF2 /* Run Script to increment CFBundleVersion */,
+				F47197F01E9EE7FA0022DFF2 /* Set CFBundleVersion from git commit count */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				F47197EB1E9E9EAC0022DFF2 /* PBXTargetDependency */,
+				F451B5251EA27E1200DE50FD /* PBXTargetDependency */,
 			);
 			name = Phew;
 			productName = Phew;
@@ -389,6 +458,10 @@
 					F407094B1E9C0F050025B591 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 5WX26Y89JP;
+						ProvisioningStyle = Automatic;
+					};
+					F451B5171EA27E1200DE50FD = {
+						CreatedOnToolsVersion = 8.3;
 						ProvisioningStyle = Automatic;
 					};
 					F47197B61E9E4C1F0022DFF2 = {
@@ -412,12 +485,20 @@
 			targets = (
 				F407094B1E9C0F050025B591 /* FLIFImages */,
 				F47197B61E9E4C1F0022DFF2 /* Phew */,
+				F451B5171EA27E1200DE50FD /* FLIFSpotlightImporter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F407094A1E9C0F050025B591 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F451B5161EA27E1200DE50FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,6 +513,7 @@
 				F47198281E9F0B190022DFF2 /* ReadMe.html in Resources */,
 				F451B4BF1E9F8CD300DE50FD /* Credits.html in Resources */,
 				F47197C61E9E4C1F0022DFF2 /* Assets.xcassets in Resources */,
+				F451B5261EA27E1200DE50FD /* FLIFSpotlightImporter.mdimporter in Resources */,
 				F471982A1E9F0B200022DFF2 /* License.html in Resources */,
 				F47197C91E9E4C1F0022DFF2 /* Main.storyboard in Resources */,
 				F47197EC1E9E9F110022DFF2 /* FLIFImages.qlgenerator in Resources */,
@@ -454,14 +536,42 @@
 			shellPath = /bin/sh;
 			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n\nrm -Rf \"/Library/QuickLook/${FULL_PRODUCT_NAME}\"\ncp -R \"$BUILT_PRODUCTS_DIR/${FULL_PRODUCT_NAME}\" /Library/QuickLook/\nqlmanage -r";
 		};
-		F47197F01E9EE7FA0022DFF2 /* Run Script to increment CFBundleVersion */ = {
+		F451B52A1EA27FBD00DE50FD /* Set CFBundleVersion from git commit count */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Run Script to increment CFBundleVersion";
+			name = "Set CFBundleVersion from git commit count";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nBUILD_NUMBER=`git rev-list HEAD | wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nif [ \"$?\" -ne 0 ] ; then\necho \"warning:Error incrementing CFBundleVersion\"\nfi";
+		};
+		F451B52B1EA27FF100DE50FD /* Set CFBundleVersion from git commit count */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set CFBundleVersion from git commit count";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nBUILD_NUMBER=`git rev-list HEAD | wc -l`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nif [ \"$?\" -ne 0 ] ; then\necho \"warning:Error incrementing CFBundleVersion\"\nfi";
+		};
+		F47197F01E9EE7FA0022DFF2 /* Set CFBundleVersion from git commit count */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Set CFBundleVersion from git commit count";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +606,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F451B5141EA27E1200DE50FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F451B5211EA27E1200DE50FD /* MySpotlightImporter.m in Sources */,
+				F451B51C1EA27E1200DE50FD /* main.c in Sources */,
+				F451B51E1EA27E1200DE50FD /* GetMetadataForFile.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F47197B31E9E4C1F0022DFF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,6 +636,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		F451B5251EA27E1200DE50FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F451B5171EA27E1200DE50FD /* FLIFSpotlightImporter */;
+			targetProxy = F451B5241EA27E1200DE50FD /* PBXContainerItemProxy */;
+		};
 		F47197EB1E9E9EAC0022DFF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F407094B1E9C0F050025B591 /* FLIFImages */;
@@ -579,11 +704,47 @@
 			};
 			name = Release;
 		};
+		F451B5281EA27E1200DE50FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FLIFSpotlightImporter/Info.plist;
+				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
+				LIBRARY_STYLE = BUNDLE;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = org.sveinbjorn.FLIFSpotlightImporter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = mdimporter;
+			};
+			name = Debug;
+		};
+		F451B5291EA27E1200DE50FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = FLIFSpotlightImporter/Info.plist;
+				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
+				LIBRARY_STYLE = BUNDLE;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = org.sveinbjorn.FLIFSpotlightImporter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = mdimporter;
+			};
+			name = Release;
+		};
 		F47197CC1E9E4C1F0022DFF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -608,7 +769,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -731,6 +892,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F451B5271EA27E1200DE50FD /* Build configuration list for PBXNativeTarget "FLIFSpotlightImporter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F451B5281EA27E1200DE50FD /* Debug */,
+				F451B5291EA27E1200DE50FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		F47197CB1E9E4C1F0022DFF2 /* Build configuration list for PBXNativeTarget "Phew" */ = {
 			isa = XCConfigurationList;
