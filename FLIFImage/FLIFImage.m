@@ -30,7 +30,7 @@
 
 #import "FLIFImage.h"
 
-#import <FLIF/flif.h>
+#import "FLIF/flif.h"
 #import <AppKit/AppKit.h>
 
 static NSData *DecodeFLIFData(NSData *data, FLIF_IMAGE **image) {

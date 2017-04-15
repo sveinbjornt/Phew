@@ -1,5 +1,6 @@
 
 For version 1.1:
     * Animation support
+    * Progressive rendering
     * Create Podspec for FLIFImage
     * Improve size efficiency by getting rid of redundant copies of libraries
