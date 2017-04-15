@@ -108,11 +108,11 @@
 		F451B4DB1EA103D000DE50FD /* Alerts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alerts.m; sourceTree = "<group>"; };
 		F451B4DD1EA1150F00DE50FD /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = Sparkle/Sparkle.framework; sourceTree = "<group>"; };
 		F451B4E21EA2432400DE50FD /* FLIFImage.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FLIFImage.podspec; sourceTree = SOURCE_ROOT; };
-		F451B4E81EA2449D00DE50FD /* flif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif.h; sourceTree = "<group>"; };
-		F451B4E91EA2449D00DE50FD /* flif_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif_common.h; sourceTree = "<group>"; };
-		F451B4EA1EA2449D00DE50FD /* flif_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif_dec.h; sourceTree = "<group>"; };
-		F451B4EB1EA2449D00DE50FD /* flif_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flif_enc.h; sourceTree = "<group>"; };
 		F451B50D1EA2553200DE50FD /* FLIFImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLIFImage.m; sourceTree = "<group>"; };
+		F451B5101EA2596600DE50FD /* flif_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flif_common.h; sourceTree = "<group>"; };
+		F451B5111EA2596600DE50FD /* flif_dec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flif_dec.h; sourceTree = "<group>"; };
+		F451B5121EA2596600DE50FD /* flif_enc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flif_enc.h; sourceTree = "<group>"; };
+		F451B5131EA2596600DE50FD /* flif.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = flif.h; sourceTree = "<group>"; };
 		F47197B71E9E4C1F0022DFF2 /* Phew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Phew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47197B91E9E4C1F0022DFF2 /* PhewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhewAppDelegate.h; sourceTree = "<group>"; };
 		F47197BA1E9E4C1F0022DFF2 /* PhewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhewAppDelegate.m; sourceTree = "<group>"; };
@@ -199,7 +199,10 @@
 				F451B4E21EA2432400DE50FD /* FLIFImage.podspec */,
 				F445ABAC1E9D175A000158FD /* FLIFImage.h */,
 				F451B50D1EA2553200DE50FD /* FLIFImage.m */,
-				F451B4E31EA2449D00DE50FD /* FLIF */,
+				F451B5101EA2596600DE50FD /* flif_common.h */,
+				F451B5111EA2596600DE50FD /* flif_dec.h */,
+				F451B5121EA2596600DE50FD /* flif_enc.h */,
+				F451B5131EA2596600DE50FD /* flif.h */,
 			);
 			name = "FLIFImage Class";
 			path = FLIFImage;
@@ -228,17 +231,6 @@
 				F451B4D21E9F995D00DE50FD /* update_appcast.sh */,
 			);
 			path = Sparkle;
-			sourceTree = "<group>";
-		};
-		F451B4E31EA2449D00DE50FD /* FLIF */ = {
-			isa = PBXGroup;
-			children = (
-				F451B4E81EA2449D00DE50FD /* flif.h */,
-				F451B4E91EA2449D00DE50FD /* flif_common.h */,
-				F451B4EA1EA2449D00DE50FD /* flif_dec.h */,
-				F451B4EB1EA2449D00DE50FD /* flif_enc.h */,
-			);
-			path = FLIF;
 			sourceTree = "<group>";
 		};
 		F47197B81E9E4C1F0022DFF2 /* Phew Application */ = {

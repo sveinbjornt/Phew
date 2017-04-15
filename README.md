@@ -10,6 +10,8 @@ Phew can open and display FLIF images, and can export them as PNG, TIFF, BMP or 
 
 * **[Download Phew 1.0](http://sveinbjorn.org/files/software/phew/Phew-1.0.zip)** (Intel 64-bit, macOS 10.10 or later, ~1.7 MB)
 
+The Phew source code contains the <code>FLIFImage</code> class, which is an Objective-C wrapper to easily read images in the FLIF format via <code>libflif</code>. This class is available via <a href="https://cocoapods.org">CocoaPods</a>. See below for further info.
+
 ## Screenshots
 
 <img src="doc/phew_screenshot1.jpg" style="max-width:100%;" alt="Phew Screenshot">
@@ -19,6 +21,23 @@ Phew can open and display FLIF images, and can export them as PNG, TIFF, BMP or 
 <img src="doc/phew_screenshot2.jpg" style="max-width:100%;" alt="Phew Screenshot">
 <img src="doc/phew_screenshot3.jpg" style="max-width:100%;" alt="Phew Screenshot">
 <img src="doc/phew_screenshot4.jpg" style="max-width:100%;" alt="Phew Screenshot">
+
+## FLIFImage Objective-C Class
+
+<code>FLIFImage</code> is an Objective-C wrapper to easily read images in the FLIF format via <code>libflif</code>, the official FLIF reference decoder implementation. You can install via <a href="https://cocoapods.org">CocoaPods</a>. 
+
+FLIFImage exposes the following class methods:
+
+    + (BOOL)isFLIFImageAtPath:(NSString *)path;
+    + (BOOL)isFLIFImageData:(NSData *)data;
+
+    + (NSImage *)newImageFromFLIFImageFileAtPath:(NSString *)path;
+    + (CGImageRef)newCGImageFromFLIFImageFileAtPath:(NSString *)path;
+
+    + (NSImage *)newImageFromFLIFData:(NSData *)data;
+    + (CGImageRef)newCGImageFromFLIFData:(NSData *)data;
+
+Those calling <code>newCGImage*</code> methods are themselves responsible for releasing the returned CGImageRef.
 
 ## License
 
