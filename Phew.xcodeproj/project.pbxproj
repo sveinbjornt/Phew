@@ -100,6 +100,7 @@
 		F40709501E9C0F050025B591 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		F40709521E9C0F050025B591 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F40709541E9C0F050025B591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F442E00D1EA4DABB00BAD80C /* MySpotlightImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySpotlightImporter.h; sourceTree = "<group>"; };
 		F445ABAC1E9D175A000158FD /* FLIFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLIFImage.h; sourceTree = "<group>"; };
 		F451B4BE1E9F8CD300DE50FD /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		F451B4C01E9F8F8D00DE50FD /* Markdown.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; name = Markdown.pl; path = doc/Markdown.pl; sourceTree = "<group>"; };
@@ -127,7 +128,6 @@
 		F451B5181EA27E1200DE50FD /* FLIFSpotlightImporter.mdimporter */ = {isa = PBXFileReference; explicitFileType = "wrapper.spotlight-importer"; includeInIndex = 0; path = FLIFSpotlightImporter.mdimporter; sourceTree = BUILT_PRODUCTS_DIR; };
 		F451B51B1EA27E1200DE50FD /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F451B51D1EA27E1200DE50FD /* GetMetadataForFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetMetadataForFile.m; sourceTree = "<group>"; };
-		F451B51F1EA27E1200DE50FD /* FLIFSpotlightImporter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FLIFSpotlightImporter.h; sourceTree = "<group>"; };
 		F451B5201EA27E1200DE50FD /* MySpotlightImporter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySpotlightImporter.m; sourceTree = "<group>"; };
 		F451B5221EA27E1200DE50FD /* Importer Read Me.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Importer Read Me.txt"; sourceTree = "<group>"; };
 		F451B5231EA27E1200DE50FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -263,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				F451B51D1EA27E1200DE50FD /* GetMetadataForFile.m */,
-				F451B51F1EA27E1200DE50FD /* FLIFSpotlightImporter.h */,
+				F442E00D1EA4DABB00BAD80C /* MySpotlightImporter.h */,
 				F451B5201EA27E1200DE50FD /* MySpotlightImporter.m */,
 				F451B5221EA27E1200DE50FD /* Importer Read Me.txt */,
 				F451B5231EA27E1200DE50FD /* Info.plist */,
@@ -714,7 +714,7 @@
 				INFOPLIST_FILE = FLIFSpotlightImporter/Info.plist;
 				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
 				LIBRARY_STYLE = BUNDLE;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = org.sveinbjorn.FLIFSpotlightImporter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -732,7 +732,7 @@
 				INFOPLIST_FILE = FLIFSpotlightImporter/Info.plist;
 				INSTALL_PATH = "@executable_path/../Contents/Library/Spotlight";
 				LIBRARY_STYLE = BUNDLE;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = org.sveinbjorn.FLIFSpotlightImporter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -744,7 +744,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -769,7 +769,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -900,6 +900,7 @@
 				F451B5291EA27E1200DE50FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F47197CB1E9E4C1F0022DFF2 /* Build configuration list for PBXNativeTarget "Phew" */ = {
 			isa = XCConfigurationList;

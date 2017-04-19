@@ -10,7 +10,7 @@
 
 #define YOUR_STORE_TYPE NSXMLStoreType
 
-@interface FLIFSpotlightImporter : NSObject
+@interface MySpotlightImporter : NSObject
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

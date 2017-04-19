@@ -8,7 +8,7 @@
 
 #include <CoreFoundation/CoreFoundation.h>
 #import <CoreData/CoreData.h>
-#import "FLIFSpotlightImporter.h"
+#import "MySpotlightImporter.h"
 
 Boolean GetMetadataForFile(void *thisInterface, CFMutableDictionaryRef attributes, CFStringRef contentTypeUTI, CFStringRef pathToFile);
 
@@ -59,7 +59,7 @@ Boolean GetMetadataForFile(void *thisInterface, CFMutableDictionaryRef attribute
         } else if ([(__bridge NSString *)contentTypeUTI isEqualToString:@"YOUR_EXTERNAL_RECORD_UTI"]) {
             // import from an external record file
             
-            FLIFSpotlightImporter *importer = [[FLIFSpotlightImporter alloc] init];
+            MySpotlightImporter *importer = [[MySpotlightImporter alloc] init];
             
             ok = [importer importFileAtPath:(__bridge NSString *)pathToFile attributes:(__bridge NSMutableDictionary *)attributes error:&error];
         }

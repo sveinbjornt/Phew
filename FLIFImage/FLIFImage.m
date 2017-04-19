@@ -111,32 +111,34 @@ static NSData *DecodeFLIFData(NSData *data, FLIF_IMAGE **image) {
 
 #pragma mark -
 
-+ (NSImage *)newImageFromFLIFImageFileAtPath:(NSString *)path {
++ (NSImage *)imageFromFileAtPath:(NSString *)path {
     
     NSData *data = [NSData dataWithContentsOfFile:path];
     if (data == nil) {
         return nil;
     }
     
-    return [FLIFImage newImageFromFLIFData:data];
+    return [FLIFImage imageFromData:data];
 }
 
 // It is the responsibility of the caller to dispose of
 // the CGImageRef returned from this function
 
-+ (CGImageRef)newCGImageFromFLIFImageFileAtPath:(NSString *)path {
++ (CGImageRef)newCGImageFromFileAtPath:(NSString *)path {
     
     NSData *data = [NSData dataWithContentsOfFile:path];
     if (data) {
-        return [FLIFImage newCGImageFromFLIFData:data];
+        return [FLIFImage newCGImageFromData:data];
     }
     
     return nil;
 }
 
+
+
 #pragma mark - 
 
-+ (NSImage *)newImageFromFLIFData:(NSData *)data {
++ (NSImage *)imageFromData:(NSData *)data {
     
     FLIF_IMAGE *flifimage;
     NSData *pixelData = DecodeFLIFData(data, &flifimage);
@@ -182,7 +184,7 @@ static NSData *DecodeFLIFData(NSData *data, FLIF_IMAGE **image) {
 // It is the responsibility of the caller to dispose of
 // the CGImageRef returned from this function
 
-+ (CGImageRef)newCGImageFromFLIFData:(NSData *)data {
++ (CGImageRef)newCGImageFromData:(NSData *)data {
     
     FLIF_IMAGE *flifimage;
     NSData *pixelData = DecodeFLIFData(data, &flifimage);

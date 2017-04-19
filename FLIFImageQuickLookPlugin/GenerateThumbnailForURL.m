@@ -48,7 +48,7 @@ OSStatus GenerateThumbnailForURL(void *thisInterface, QLThumbnailRequestRef thum
     @autoreleasepool {
         
         NSString *path = [(__bridge NSURL *)url path];
-        CGImageRef cgImgRef = [FLIFImage newCGImageFromFLIFImageFileAtPath:path];
+        CGImageRef cgImgRef = [FLIFImage newCGImageFromFileAtPath:path];
         if (cgImgRef) {
             QLThumbnailRequestSetImage(thumbnail, cgImgRef, nil);
             CGImageRelease(cgImgRef);

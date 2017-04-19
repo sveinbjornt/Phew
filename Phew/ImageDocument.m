@@ -65,7 +65,7 @@
 
 - (BOOL)readFromData:(NSData *)theData ofType:(NSString *)typeName error:(NSError **)outError {
 
-    CGImageRef imgRef = [FLIFImage newCGImageFromFLIFData:theData];
+    CGImageRef imgRef = [FLIFImage newCGImageFromData:theData];
     if (imgRef) {
         cgImage = imgRef;
         self.data = theData;

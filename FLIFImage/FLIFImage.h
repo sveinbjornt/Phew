@@ -35,10 +35,10 @@
 + (BOOL)isFLIFImageAtPath:(NSString *)path;
 + (BOOL)isFLIFImageData:(NSData *)data;
 
-+ (NSImage *)newImageFromFLIFImageFileAtPath:(NSString *)path;
-+ (CGImageRef)newCGImageFromFLIFImageFileAtPath:(NSString *)path;
++ (NSImage *)imageFromFileAtPath:(NSString *)path;
++ (CGImageRef)newCGImageFromFileAtPath:(NSString *)path;
 
-+ (NSImage *)newImageFromFLIFData:(NSData *)data;
-+ (CGImageRef)newCGImageFromFLIFData:(NSData *)data;
++ (NSImage *)imageFromData:(NSData *)data;
++ (CGImageRef)newCGImageFromData:(NSData *)data;
 
 @end
