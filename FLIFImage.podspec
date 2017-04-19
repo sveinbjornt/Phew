@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
     s.license      = { :type => 'BSD' }
     s.author       = { "Sveinbjorn Thordarson" => "sveinbjornt@gmail.com" }
     s.osx.deployment_target = "10.10"
-    s.source       = { :git => "https://github.com/sveinbjornt/Phew.git", :tag => "1.0.1" }
+    s.source       = { :git => "https://github.com/sveinbjornt/Phew.git", :tag => "1.0.2" }
     s.source_files = "FLIFImage/FLIFImage.{h,m}", "FLIFImage/*"
     s.exclude_files = ""
     s.public_header_files = "FLIFImage/*.h"
