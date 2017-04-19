@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "FLIFImage"
-    s.version      = "1.0.1"
+    s.version      = "1.0.2"
     s.summary      = "Objective-C wrapper for libflif"
     s.description  = "Objective-C class to easily read images in the FLIF format via libflif."
     s.homepage     = "http://github.com/sveinbjornt/Phew"
