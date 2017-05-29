@@ -15,7 +15,7 @@ Phew can open and display FLIF images, and can export them as PNG, TIFF, BMP or 
 
 The Phew source code contains the <code>FLIFImage</code> class, which is an Objective-C wrapper to easily read images in the FLIF format via <code>libflif</code>. This class is available via <a href="https://cocoapods.org">CocoaPods</a>. See below for further info.
 
-Phew is also available through [Homebrew Caskroom](https://caskroom.github.io
+Phew is also available through [Homebrew Caskroom](https://caskroom.github.io)
 
     brew cask install phew
 
