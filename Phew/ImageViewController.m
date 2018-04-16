@@ -1,6 +1,6 @@
 /*
  Phew - native, open-source FLIF image viewer for macOS
- Copyright (c) 2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
+ Copyright (c) 2017, Sveinbjorn Thordarson <sveinbjorn@sveinbjorn.org>
  
  Redistribution and use in source and binary forms, with or without modification,
  are permitted provided that the following conditions are met:
@@ -135,7 +135,10 @@
 
 - (void)setImageZoomFactor:(CGFloat)factor {
     self.fitToSize = NO;
+    [CATransaction begin];
+    [CATransaction setValue:@(0.f) forKey:kCATransactionAnimationDuration];
     [imageView setZoomFactor:factor];
+    [CATransaction commit];
 }
 
 @end

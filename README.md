@@ -45,7 +45,7 @@ Those calling <code>newCGImage*</code> methods are responsible for releasing the
 Phew uses <a href="https://github.com/FLIF-hub/FLIF"><code>libflif</code></a>, which is distributed under the 
 <a href="http://www.gnu.org/licenses/gpl.html">GNU Lesser General Public License</a> (LGPL), version 3 or later. Phew itself is also open source software, available under the three-clause BSD license:
 
-> Copyright (c) 2017, Sveinbjorn Thordarson &lt;sveinbjornt@gmail.com&gt;
+> Copyright (c) 2017, Sveinbjorn Thordarson &lt;sveinbjorn@sveinbjorn.org&gt;
 > 
 > Redistribution and use in source and binary forms, with or without modification,
 > are permitted provided that the following conditions are met:

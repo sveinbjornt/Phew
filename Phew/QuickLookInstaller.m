@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2017, Sveinbjorn Thordarson <sveinbjornt@gmail.com>
+ Copyright (c) 2017, Sveinbjorn Thordarson <sveinbjorn@sveinbjorn.org>
  
  Redistribution and use in source and binary forms, with or without modification,
  are permitted provided that the following conditions are met:
