@@ -15,7 +15,7 @@
 		F451B4D51E9FCDB800DE50FD /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = F451B4CD1E9F995D00DE50FD /* dsa_pub.pem */; };
 		F451B4DC1EA103D000DE50FD /* Alerts.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B4DB1EA103D000DE50FD /* Alerts.m */; };
 		F451B4DF1EA1153000DE50FD /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4DD1EA1150F00DE50FD /* Sparkle.framework */; };
-		F451B4E01EA1154F00DE50FD /* Sparkle.framework in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4DD1EA1150F00DE50FD /* Sparkle.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F451B4E01EA1154F00DE50FD /* Sparkle.framework in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F451B4DD1EA1150F00DE50FD /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F451B50E1EA2553200DE50FD /* FLIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B50D1EA2553200DE50FD /* FLIFImage.m */; };
 		F451B50F1EA2553200DE50FD /* FLIFImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F451B50D1EA2553200DE50FD /* FLIFImage.m */; };
 		F451B51C1EA27E1200DE50FD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = F451B51B1EA27E1200DE50FD /* main.c */; };
@@ -39,10 +39,10 @@
 		F47197F41E9EFC9C0022DFF2 /* libflif.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; };
 		F47197F51E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; };
 		F47197F61E9EFC9C0022DFF2 /* libpng.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; };
-		F47197F71E9EFCB50022DFF2 /* libflif.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; };
+		F47197F71E9EFCB50022DFF2 /* libflif.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F47197F91E9EFCBE0022DFF2 /* libflif.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F47197F11E9EFC9C0022DFF2 /* libflif.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F47197FA1E9EFCC00022DFF2 /* libpng.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		F47198121E9F06470022DFF2 /* libpng.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; };
+		F47198121E9F06470022DFF2 /* libpng.dylib in Copy to Frameworks */ = {isa = PBXBuildFile; fileRef = F47197F21E9EFC9C0022DFF2 /* libpng.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		F47198281E9F0B190022DFF2 /* ReadMe.html in Resources */ = {isa = PBXBuildFile; fileRef = F47198271E9F0B190022DFF2 /* ReadMe.html */; };
 		F471982A1E9F0B200022DFF2 /* License.html in Resources */ = {isa = PBXBuildFile; fileRef = F47198291E9F0B200022DFF2 /* License.html */; };
 		F47198311E9F0C100022DFF2 /* NSWorkspace+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = F47198301E9F0C100022DFF2 /* NSWorkspace+Additions.m */; };
@@ -100,6 +100,7 @@
 		F40709501E9C0F050025B591 /* GeneratePreviewForURL.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneratePreviewForURL.m; sourceTree = "<group>"; };
 		F40709521E9C0F050025B591 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		F40709541E9C0F050025B591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4081F9D20854EB1009BB15A /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		F442E00D1EA4DABB00BAD80C /* MySpotlightImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySpotlightImporter.h; sourceTree = "<group>"; };
 		F445ABAC1E9D175A000158FD /* FLIFImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLIFImage.h; sourceTree = "<group>"; };
 		F451B4BE1E9F8CD300DE50FD /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
@@ -342,6 +343,7 @@
 				F47198251E9F0B020022DFF2 /* README.md */,
 				F47198271E9F0B190022DFF2 /* ReadMe.html */,
 				F47198291E9F0B200022DFF2 /* License.html */,
+				F4081F9D20854EB1009BB15A /* License.txt */,
 				F451B4C01E9F8F8D00DE50FD /* Markdown.pl */,
 				F451B4C71E9F8FC500DE50FD /* images */,
 			);
@@ -452,7 +454,7 @@
 		F4898B2A1E9BD3C700C5F29D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Sveinbjorn Thordarson";
 				TargetAttributes = {
 					F407094B1E9C0F050025B591 = {
@@ -534,7 +536,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n\nrm -Rf \"/Library/QuickLook/${FULL_PRODUCT_NAME}\"\ncp -R \"$BUILT_PRODUCTS_DIR/${FULL_PRODUCT_NAME}\" /Library/QuickLook/\nqlmanage -r";
+			shellScript = "install_name_tool -change libflif.0.dylib @loader_path/../Frameworks/libflif.dylib ${TARGET_BUILD_DIR}/${EXECUTABLE_PATH}\n\n#rm -Rf \"/Library/QuickLook/${FULL_PRODUCT_NAME}\"\n#cp -R \"$BUILT_PRODUCTS_DIR/${FULL_PRODUCT_NAME}\" /Library/QuickLook/\nqlmanage -r";
 		};
 		F451B52A1EA27FBD00DE50FD /* Set CFBundleVersion from git commit count */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -800,15 +802,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -849,15 +859,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = NO;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
